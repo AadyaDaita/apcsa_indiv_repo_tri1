@@ -2,7 +2,7 @@
 toc: true
 layout: post
 categories: [markdown]
-title: Markdown
+title: Primitive and Wrapper Classes Data Types
 ---
 
 **Java**
