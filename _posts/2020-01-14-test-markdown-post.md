@@ -98,6 +98,5 @@ key: value
 ## Footnotes
 
 
-
 [^1]: This is the footnote.
 
