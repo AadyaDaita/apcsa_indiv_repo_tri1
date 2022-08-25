@@ -2,7 +2,7 @@
 toc: true
 layout: post
 categories: [markdown]
-title: Primitive and Wrapper Classes Data Types
+title: Primitives and Wrapper Classes Data Types
 ---
 
 **Java**
