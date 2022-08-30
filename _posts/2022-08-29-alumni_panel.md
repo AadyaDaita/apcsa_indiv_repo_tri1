@@ -6,7 +6,6 @@ title: Alumni Panel Notes
 ---
 
 **Colin**
-
 - UCSD, took csp twice
 - How did you realize you wanted to do CS
 - Realized he was good at CS. Friends encouraged him, but also choose to appeal to his own skill
