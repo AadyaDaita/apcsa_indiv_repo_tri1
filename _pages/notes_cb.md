@@ -7,6 +7,9 @@ permalink: /notes/
 
 ### College Board 
 
+ 
+<a href="https://aadyadaita.github.io/apcsa_indiv_repo_tri1/2022/08/30/notes_tri1.html#object-oriented-programming-basic-vocab ">Overall Notes</a>
+
 <table>
   <tr>
     <th>Topic</th>
