@@ -60,6 +60,10 @@ permalink: /notes/
   <tr>
     <td>Bash & Checks </td>
     <td><a href="https://aadyadaita.github.io/apcsa_indiv_repo_tri1/2022/08/25/bash_kernel.html">Bash and Shell Script Notes</a></td>
-   
+  </tr>
+
+   <tr>
+    <td>Alumni </td>
+    <td><a href="https://aadyadaita.github.io/apcsa_indiv_repo_tri1/markdown/2022/08/29/alumni_panel.html">Alumni Notes</a></td>
   </tr>
 </table>
