@@ -37,7 +37,7 @@ permalink: /notes/
   </tr>
   <tr>
       <td>Unit 1 - Basics of Objects Oriented Programming </td>
-      <td><a href="https://aadyadaita.github.io/apcsa_indiv_repo_tri1/2022/09/03/Unit-1-Code.org-Vocab-(1).html">OOP Notes</a></td>
+      <td><a href="https://aadyadaita.github.io/apcsa_indiv_repo_tri1/2022/09/03/Unit-1-Code.org-Vocab.html">OOP Notes</a></td>
     
   </tr>
 
