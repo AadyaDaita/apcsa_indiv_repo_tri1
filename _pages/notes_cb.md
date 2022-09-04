@@ -7,9 +7,6 @@ permalink: /notes/
 
 ### College Board 
 
- 
-<a href="https://aadyadaita.github.io/apcsa_indiv_repo_tri1/2022/08/30/notes_tri1.html#object-oriented-programming-basic-vocab ">Overall Notes</a>
-
 <table>
   <tr>
     <th>Topic</th>
@@ -31,6 +28,20 @@ permalink: /notes/
   </tr>
 </table>
 
+
+### Code.org Vocab
+<table>
+  <tr>
+    <th>Unit</th>
+    <th>Notes</th>
+  </tr>
+  <tr>
+      <td>Unit 1 - Basics of Objects Oriented Programming </td>
+      <td><a href="https://aadyadaita.github.io/apcsa_indiv_repo_tri1/2022/09/03/OOP-Unit-1.html">OOP Notes</a></td>
+    
+  </tr>
+
+</table>
 
 ### PBL Lessons
 
