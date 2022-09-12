@@ -252,36 +252,36 @@ window.onload = wrap_img;
 <div class=" highlight hl-java"><pre><span></span><span class="kn">import</span> <span class="nn">java.util.Scanner</span><span class="p">;</span>
 <span class="kn">import static</span> <span class="nn">java.lang.Math</span>
 
-    <span class="k">try</span> <span class="p">{</span>
-      <span class="n">Scanner</span> <span class="n">numerator</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>  <span class="c1">// creating a scanner object</span>
-      <span class="n">String</span> <span class="n">score_text</span> <span class="o">=</span> <span class="s">&quot;enter the score you got&quot;</span><span class="p">;</span> <span class="c1">//usage of string to print a message</span>
-      <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">score_text</span><span class="p">);</span> <span class="c1">// score they got is a float, because the points recieved could be fractional</span>
-      <span class="kt">float</span> <span class="n">score</span> <span class="o">=</span> <span class="n">Integer</span><span class="p">.</span><span class="na">parseInt</span><span class="p">(</span><span class="n">numerator</span><span class="p">.</span><span class="na">nextLine</span><span class="p">());</span>  <span class="c1">// read user input</span>
-      <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">score</span><span class="p">);</span>
-      
-      <span class="n">Scanner</span> <span class="n">denominator</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>  <span class="c1">// creating another scanner object</span>
-      <span class="n">String</span> <span class="n">out_off_text</span> <span class="o">=</span> <span class="s">&quot;enter what the score is out off&quot;</span><span class="p">;</span> <span class="c1">//usage of strings again</span>
-      <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">out_off_text</span><span class="p">);</span> 
-      <span class="kt">int</span> <span class="n">out_off</span> <span class="o">=</span> <span class="n">Integer</span><span class="p">.</span><span class="na">parseInt</span><span class="p">(</span><span class="n">denominator</span><span class="p">.</span><span class="na">nextLine</span><span class="p">());</span>  <span class="c1">// out off is an int - something is out off is typically a whole #</span>
-      <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">out_off</span><span class="p">);</span>
-      
-      <span class="kt">float</span> <span class="n">temp_score</span> <span class="o">=</span> <span class="p">(</span><span class="n">score</span> <span class="o">/</span> <span class="n">out_off</span><span class="p">);</span>
-      <span class="kt">float</span> <span class="n">final_score</span> <span class="o">=</span> <span class="n">temp_score</span> <span class="o">*</span> <span class="mi">100</span><span class="n">f</span><span class="p">;</span> <span class="c1">//divide the two numbers, and multiple by a 100 - in float form bc score/out_off </span>
-                                             <span class="c1">// could be fractional</span>
-      <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">final_score</span> <span class="o">+</span> <span class="s">&quot;%&quot;</span><span class="p">);</span>  <span class="c1">// print the percentage as a float</span>
+  <span class="k">try</span> <span class="p">{</span>
+    <span class="n">Scanner</span> <span class="n">numerator</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>  <span class="c1">// creating a scanner object</span>
+    <span class="n">String</span> <span class="n">score_text</span> <span class="o">=</span> <span class="s">&quot;enter the score you got&quot;</span><span class="p">;</span> <span class="c1">//usage of string to print a message</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">score_text</span><span class="p">);</span> <span class="c1">// score they got is a float, because the points recieved could be fractional</span>
+    <span class="kt">float</span> <span class="n">score</span> <span class="o">=</span> <span class="n">Integer</span><span class="p">.</span><span class="na">parseInt</span><span class="p">(</span><span class="n">numerator</span><span class="p">.</span><span class="na">nextLine</span><span class="p">());</span>  <span class="c1">// read user input</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">score</span><span class="p">);</span>
+    
+    <span class="n">Scanner</span> <span class="n">denominator</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>  <span class="c1">// creating another scanner object</span>
+    <span class="n">String</span> <span class="n">out_off_text</span> <span class="o">=</span> <span class="s">&quot;enter what the score is out off&quot;</span><span class="p">;</span> <span class="c1">//usage of strings again</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">out_off_text</span><span class="p">);</span> 
+    <span class="kt">int</span> <span class="n">out_off</span> <span class="o">=</span> <span class="n">Integer</span><span class="p">.</span><span class="na">parseInt</span><span class="p">(</span><span class="n">denominator</span><span class="p">.</span><span class="na">nextLine</span><span class="p">());</span>  <span class="c1">// out off is an int - something is out off is typically a whole #</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">out_off</span><span class="p">);</span>
+    
+    <span class="kt">float</span> <span class="n">temp_score</span> <span class="o">=</span> <span class="p">(</span><span class="n">score</span> <span class="o">/</span> <span class="n">out_off</span><span class="p">);</span>
+    <span class="kt">float</span> <span class="n">final_score</span> <span class="o">=</span> <span class="n">temp_score</span> <span class="o">*</span> <span class="mi">100</span><span class="n">f</span><span class="p">;</span> <span class="c1">//divide the two numbers, and multiple by a 100 - in float form bc score/out_off </span>
+                                            <span class="c1">// could be fractional</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">final_score</span> <span class="o">+</span> <span class="s">&quot;%&quot;</span><span class="p">);</span>  <span class="c1">// print the percentage as a float</span>
 
-      <span class="kt">boolean</span> <span class="n">passed</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span> <span class="c1">//using boolean to see if you have passed the class</span>
-      <span class="k">if</span> <span class="p">(</span><span class="n">final_score</span> <span class="o">&gt;</span> <span class="mf">68.0</span><span class="p">){</span>
-        <span class="n">passed</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;You passed: &quot;</span> <span class="o">+</span> <span class="n">passed</span><span class="p">);</span>
-      <span class="p">}</span>
-      <span class="k">else</span> <span class="p">{</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;You passed: &quot;</span> <span class="o">+</span>  <span class="n">passed</span><span class="p">);</span>
-      <span class="p">}</span>
-      
-    <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">Exception</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
-      <span class="c1">//TODO: handle exception</span>
+    <span class="kt">boolean</span> <span class="n">passed</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span> <span class="c1">//using boolean to see if you have passed the class</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">final_score</span> <span class="o">&gt;</span> <span class="mf">68.0</span><span class="p">){</span>
+      <span class="n">passed</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+      <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;You passed: &quot;</span> <span class="o">+</span> <span class="n">passed</span><span class="p">);</span>
     <span class="p">}</span>
+    <span class="k">else</span> <span class="p">{</span>
+      <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;You passed: &quot;</span> <span class="o">+</span>  <span class="n">passed</span><span class="p">);</span>
+    <span class="p">}</span>
+    
+  <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">Exception</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">//TODO: handle exception</span>
+  <span class="p">}</span>
 </pre></div>
 
     </div>
