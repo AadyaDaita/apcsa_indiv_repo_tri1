@@ -1,0 +1,87 @@
+<script>
+var students = [ 
+    new Person("Anthony", "tonyhieu", 2022),
+    new Person("Bria", "B-G101", 2023),
+    new Person("Allie", "xiaoa0", 2023),
+    new Person("Tigran", "Tigran7", 2023),
+    new Person("Rebecca", "Rebecca-123", 2023)
+];
+
+// define a classroom and build Classroom objects and json
+function Classroom(teacher, students){ // 1 teacher, many student
+    // start Classroom with Teacher
+    teacher.setRole("Teacher");
+    this.teacher = teacher;
+    this.classroom = [teacher];
+    // add each Student to Classroom
+    this.students = students;
+    this.students.forEach(student => { student.setRole("Student"); this.classroom.push(student); });
+    // build json/string format of Classroom
+    this.json = [];
+    this.classroom.forEach(person => this.json.push(person.toJSON()));
+}
+
+// make a CompSci classroom from formerly defined teacher and students
+compsci = new Classroom(teacher, students);
+
+// output of Objects and JSON in CompSci classroom
+logItType(compsci.classroom);  // constructed classroom object
+logItType(compsci.classroom[0].name);  // abstract 1st objects name
+logItType(compsci.json[0]);  // show json conversion of 1st object to string
+logItType(JSON.parse(compsci.json[0]));  // show JSON.parse inverse of JSON.stringify
+
+
+</script>
+
+<script>
+// define an HTML conversion "method" associated with Classroom
+Classroom.prototype._toHtml = function() {
+  // HTML Style is build using inline structure
+  var style = (
+    "display:inline-block;" +
+    "border: 2px solid grey;" +
+    "box-shadow: 0.8em 0.4em 0.4em grey;"
+  );
+
+  // HTML Body of Table is build as a series of concatenations (+=)
+  var body = "";
+  // Heading for Array Columns
+  body += "<tr>";
+  body += "<th><mark>" + "Name" + "</mark></th>";
+  body += "<th><mark>" + "GitHub ID" + "</mark></th>";
+  body += "<th><mark>" + "Class Of" + "</mark></th>";
+  body += "<th><mark>" + "Role" + "</mark></th>";
+  body += "</tr>";
+  // Data of Array, iterate through each row of compsci.classroom 
+  for (var row in compsci.classroom) {
+    // tr for each row, a new line
+    body += "<tr>";
+    // td for each column of data
+    body += "<td>" + compsci.classroom[row].name + "</td>";
+    body += "<td>" + compsci.classroom[row].ghID + "</td>";
+    body += "<td>" + compsci.classroom[row].classOf + "</td>";
+    body += "<td>" + compsci.classroom[row].role + "</td>";
+    // tr to end line
+    body += "<tr>";
+  }
+
+   // Build and HTML fragment of div, table, table body
+  return (
+    "<div style='" + style + "'>" +
+      "<table>" +
+        body +
+      "</table>" +
+    "</div>"
+  );
+
+};
+
+// IJavaScript HTML processor receive parameter of defined HTML fragment
+$$.html(compsci._toHtml());
+
+
+
+
+
+</script>
+
