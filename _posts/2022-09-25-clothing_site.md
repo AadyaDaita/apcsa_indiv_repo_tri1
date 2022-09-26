@@ -17,9 +17,7 @@ function Dress(brand, color, price, image) {
 }
 
 
-
-
-// define an HTML conversion "method" associated with Classroom
+// define an HTML conversion "method" associated with dress
 Dress.prototype._toHtml = function() {
 
   // HTML Style is build using inline structure
@@ -40,10 +38,10 @@ var dresses = [
     new Dress("Windsor", "red", 55)
 ];
 
-idek = new Dress(dresses);
+dress = new Dress(dresses);
 
 
-for (const row of idek.Dress) {
+for (const row of dress.Dress) {
     // td for each column
     const brand = document.getElementById("brand1");
     const color = document.getElementById("color1");
@@ -63,12 +61,12 @@ for (const row of idek.Dress) {
 <div id = "brand1">Lucy In the Sky</div>
 <div id = "color1">blue</div>
 <div id = "price1">$55</div>
-<img id = "image1" src="https://media.lucyinthesky.com/data/Dec20_1/800xAUTO/1V9A0954.JPG" alt="dress 2" style="width:25%">
+<img id = "image1" src="https://media.lucyinthesky.com/data/Dec20_1/800xAUTO/1V9A0954.JPG" style="width:15%"  coords="34,44,270,350">
 
 
 
 <div id = "brand2">Windsor</div>
 <div id = "color2">maroon</div>
 <div id = "price2">$60</div>
-<img id = "image2" src="https://media.lucyinthesky.com/data/Nov21_2/800xAUTO/1V9A2008.JPG" alt="dress 2" style="width:25%">
+<img id = "image2" src="https://media.lucyinthesky.com/data/Nov21_2/800xAUTO/1V9A2008.JPG" style="width:25%">
 
