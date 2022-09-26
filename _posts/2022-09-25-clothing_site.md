@@ -60,18 +60,26 @@ for (const row of idek.Dress) {
 
 </script>
 
-<div id = "brand1">Lucy In the Sky</div>
-<div id = "color1">blue</div>
-<div id = "price1">$55</div>
-<img id = "image1" src="https://media.lucyinthesky.com/data/Dec20_1/800xAUTO/1V9A0954.JPG" alt="dress 2" style="width:25%">
 
 
-
-<div id = "brand2">Windsor</div>
-<div id = "color2">maroon</div>
-<div id = "price2">$60</div>
+<h3 id = "brand2">Windsor</h3>
+<h3 id = "color2">maroon</h3>
+<h3 id = "price2">$60</h3>
 <img id = "image2" src="https://media.lucyinthesky.com/data/Nov21_2/800xAUTO/1V9A2008.JPG" alt="dress 2" style="width:25%">
 
 
 
 
+<div class="split left">
+  <div class="centered">
+    <img id = "image1" src="https://media.lucyinthesky.com/data/Dec20_1/800xAUTO/1V9A0954.JPG" alt="dress 2" style="width:25%">
+  </div>
+</div>
+
+<div class="split right">
+  <div class="centered">
+    <h3 id = "brand1">Lucy In the Sky</h3>
+    <h3 id = "color1">blue</h3>
+    <h3 id = "price1">$55</h3>
+  </div>
+</div>
