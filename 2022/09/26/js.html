@@ -145,7 +145,7 @@ window.onload = wrap_img;
     <span class="k">this</span><span class="p">.</span><span class="nx">fav</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">;</span>
 <span class="p">}</span>
 
-<span class="c1">// define a setter for role in Person data</span>
+<span class="c1">// define a setter for fav in Dress data</span>
 <span class="nx">Dress</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">setFav</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">fav</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">this</span><span class="p">.</span><span class="nx">fav</span> <span class="o">=</span> <span class="nx">fav</span><span class="p">;</span>
 <span class="p">}</span>
@@ -208,19 +208,19 @@ string ; {&#34;brand&#34;:&#34;Lucy In the Sky&#34;,&#34;color&#34;:&#34;blue&#3
 
 <span class="c1">// define a classroom and build Classroom objects and json</span>
 <span class="kd">function</span> <span class="nx">favorite_list</span><span class="p">(</span><span class="nx">dress1</span><span class="p">,</span> <span class="nx">dresses</span><span class="p">){</span> <span class="c1">// 1 teacher, many student</span>
-    <span class="c1">// start Classroom with Teacher</span>
+
     <span class="nx">dress1</span><span class="p">.</span><span class="nx">setFav</span><span class="p">(</span><span class="s2">&quot;Favorite&quot;</span><span class="p">);</span>
     <span class="k">this</span><span class="p">.</span><span class="nx">dress1</span> <span class="o">=</span> <span class="nx">dress1</span><span class="p">;</span>
     <span class="k">this</span><span class="p">.</span><span class="nx">js</span> <span class="o">=</span> <span class="p">[</span><span class="nx">dress1</span><span class="p">];</span>
-    <span class="c1">// add each Student to Classroom</span>
+  
     <span class="k">this</span><span class="p">.</span><span class="nx">dresses</span> <span class="o">=</span> <span class="nx">dresses</span><span class="p">;</span>
     <span class="k">this</span><span class="p">.</span><span class="nx">dresses</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">dresses</span> <span class="p">=&gt;</span> <span class="p">{</span> <span class="nx">dresses</span><span class="p">.</span><span class="nx">setFav</span><span class="p">(</span><span class="s2">&quot;Backup Options&quot;</span><span class="p">);</span> <span class="k">this</span><span class="p">.</span><span class="nx">js</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">dresses</span><span class="p">);</span> <span class="p">});</span>
-    <span class="c1">// build json/string format of Classroom</span>
+
     <span class="k">this</span><span class="p">.</span><span class="nx">json</span> <span class="o">=</span> <span class="p">[];</span>
     <span class="k">this</span><span class="p">.</span><span class="nx">js</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">person</span> <span class="p">=&gt;</span> <span class="k">this</span><span class="p">.</span><span class="nx">json</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">person</span><span class="p">.</span><span class="nx">toJSON</span><span class="p">()));</span>
 <span class="p">}</span>
 
-<span class="c1">// make a CompSci classroom from formerly defined teacher and students</span>
+<span class="c1">// make a CompSci classroom from formerly defined dress1 and dresses</span>
 <span class="nx">dress_list</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">favorite_list</span><span class="p">(</span><span class="nx">dress1</span><span class="p">,</span> <span class="nx">dresses</span><span class="p">);</span>
 
 <span class="c1">// output of Objects and JSON in CompSci classroom</span>
@@ -289,49 +289,49 @@ object ; { brand: &#39;Lucy In the Sky&#39;,
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-javascript"><pre><span></span><span class="c1">// define an HTML conversion &quot;method&quot; associated with Classroom</span>
-<span class="nx">Classroom</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">_toHtml</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-    <span class="c1">// HTML Style is build using inline structure</span>
-    <span class="kd">var</span> <span class="nx">style</span> <span class="o">=</span> <span class="p">(</span>
-      <span class="s2">&quot;display:inline-block;&quot;</span> <span class="o">+</span>
-      <span class="s2">&quot;border: 2px solid grey;&quot;</span> <span class="o">+</span>
-      <span class="s2">&quot;box-shadow: 0.8em 0.4em 0.4em grey;&quot;</span>
-    <span class="p">);</span>
-  
-    <span class="c1">// HTML Body of Table is build as a series of concatenations (+=)</span>
-    <span class="kd">var</span> <span class="nx">body</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">;</span>
-    <span class="c1">// Heading for Array Columns</span>
+<span class="nx">favorite_list</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">_toHtml</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="c1">// HTML Style is build using inline structure</span>
+  <span class="kd">var</span> <span class="nx">style</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="s2">&quot;display:inline-block;&quot;</span> <span class="o">+</span>
+    <span class="s2">&quot;border: 2px solid grey;&quot;</span> <span class="o">+</span>
+    <span class="s2">&quot;box-shadow: 0.8em 0.4em 0.4em grey;&quot;</span>
+  <span class="p">);</span>
+
+  <span class="c1">// HTML Body of Table is build as a series of concatenations (+=)</span>
+  <span class="kd">var</span> <span class="nx">body</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">;</span>
+  <span class="c1">// Heading for Array Columns</span>
+  <span class="nx">body</span> <span class="o">+=</span> <span class="s2">&quot;&lt;tr&gt;&quot;</span><span class="p">;</span>
+  <span class="nx">body</span> <span class="o">+=</span> <span class="s2">&quot;&lt;th&gt;&lt;mark&gt;&quot;</span> <span class="o">+</span> <span class="s2">&quot;Brand&quot;</span> <span class="o">+</span> <span class="s2">&quot;&lt;/mark&gt;&lt;/th&gt;&quot;</span><span class="p">;</span>
+  <span class="nx">body</span> <span class="o">+=</span> <span class="s2">&quot;&lt;th&gt;&lt;mark&gt;&quot;</span> <span class="o">+</span> <span class="s2">&quot;Color&quot;</span> <span class="o">+</span> <span class="s2">&quot;&lt;/mark&gt;&lt;/th&gt;&quot;</span><span class="p">;</span>
+  <span class="nx">body</span> <span class="o">+=</span> <span class="s2">&quot;&lt;th&gt;&lt;mark&gt;&quot;</span> <span class="o">+</span> <span class="s2">&quot;Price&quot;</span> <span class="o">+</span> <span class="s2">&quot;&lt;/mark&gt;&lt;/th&gt;&quot;</span><span class="p">;</span>
+  <span class="nx">body</span> <span class="o">+=</span> <span class="s2">&quot;&lt;th&gt;&lt;mark&gt;&quot;</span> <span class="o">+</span> <span class="s2">&quot;Opinion&quot;</span> <span class="o">+</span> <span class="s2">&quot;&lt;/mark&gt;&lt;/th&gt;&quot;</span><span class="p">;</span>
+  <span class="nx">body</span> <span class="o">+=</span> <span class="s2">&quot;&lt;/tr&gt;&quot;</span><span class="p">;</span>
+  <span class="c1">// Data of Array, iterate through each row of compsci.classroom </span>
+  <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">row</span> <span class="k">in</span> <span class="nx">dress_list</span><span class="p">.</span><span class="nx">js</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// tr for each row, a new line</span>
     <span class="nx">body</span> <span class="o">+=</span> <span class="s2">&quot;&lt;tr&gt;&quot;</span><span class="p">;</span>
-    <span class="nx">body</span> <span class="o">+=</span> <span class="s2">&quot;&lt;th&gt;&lt;mark&gt;&quot;</span> <span class="o">+</span> <span class="s2">&quot;Brand&quot;</span> <span class="o">+</span> <span class="s2">&quot;&lt;/mark&gt;&lt;/th&gt;&quot;</span><span class="p">;</span>
-    <span class="nx">body</span> <span class="o">+=</span> <span class="s2">&quot;&lt;th&gt;&lt;mark&gt;&quot;</span> <span class="o">+</span> <span class="s2">&quot;Color&quot;</span> <span class="o">+</span> <span class="s2">&quot;&lt;/mark&gt;&lt;/th&gt;&quot;</span><span class="p">;</span>
-    <span class="nx">body</span> <span class="o">+=</span> <span class="s2">&quot;&lt;th&gt;&lt;mark&gt;&quot;</span> <span class="o">+</span> <span class="s2">&quot;Price&quot;</span> <span class="o">+</span> <span class="s2">&quot;&lt;/mark&gt;&lt;/th&gt;&quot;</span><span class="p">;</span>
-    <span class="nx">body</span> <span class="o">+=</span> <span class="s2">&quot;&lt;th&gt;&lt;mark&gt;&quot;</span> <span class="o">+</span> <span class="s2">&quot;Opinion&quot;</span> <span class="o">+</span> <span class="s2">&quot;&lt;/mark&gt;&lt;/th&gt;&quot;</span><span class="p">;</span>
-    <span class="nx">body</span> <span class="o">+=</span> <span class="s2">&quot;&lt;/tr&gt;&quot;</span><span class="p">;</span>
-    <span class="c1">// Data of Array, iterate through each row of compsci.classroom </span>
-    <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">row</span> <span class="k">in</span> <span class="nx">dress_list</span><span class="p">.</span><span class="nx">js</span><span class="p">)</span> <span class="p">{</span>
-      <span class="c1">// tr for each row, a new line</span>
-      <span class="nx">body</span> <span class="o">+=</span> <span class="s2">&quot;&lt;tr&gt;&quot;</span><span class="p">;</span>
-      <span class="c1">// td for each column of data</span>
-      <span class="nx">body</span> <span class="o">+=</span> <span class="s2">&quot;&lt;td&gt;&quot;</span> <span class="o">+</span> <span class="nx">dress_list</span><span class="p">.</span><span class="nx">js</span><span class="p">[</span><span class="nx">row</span><span class="p">].</span><span class="nx">brand</span> <span class="o">+</span> <span class="s2">&quot;&lt;/td&gt;&quot;</span><span class="p">;</span>
-      <span class="nx">body</span> <span class="o">+=</span> <span class="s2">&quot;&lt;td&gt;&quot;</span> <span class="o">+</span> <span class="nx">dress_list</span><span class="p">.</span><span class="nx">js</span><span class="p">[</span><span class="nx">row</span><span class="p">].</span><span class="nx">color</span> <span class="o">+</span> <span class="s2">&quot;&lt;/td&gt;&quot;</span><span class="p">;</span>
-      <span class="nx">body</span> <span class="o">+=</span> <span class="s2">&quot;&lt;td&gt;&quot;</span> <span class="o">+</span> <span class="nx">dress_list</span><span class="p">.</span><span class="nx">js</span><span class="p">[</span><span class="nx">row</span><span class="p">].</span><span class="nx">price</span> <span class="o">+</span> <span class="s2">&quot;&lt;/td&gt;&quot;</span><span class="p">;</span>
-      <span class="nx">body</span> <span class="o">+=</span> <span class="s2">&quot;&lt;td&gt;&quot;</span> <span class="o">+</span> <span class="nx">dress_list</span><span class="p">.</span><span class="nx">js</span><span class="p">[</span><span class="nx">row</span><span class="p">].</span><span class="nx">fav</span> <span class="o">+</span> <span class="s2">&quot;&lt;/td&gt;&quot;</span><span class="p">;</span>
-      <span class="c1">// tr to end line</span>
-      <span class="nx">body</span> <span class="o">+=</span> <span class="s2">&quot;&lt;tr&gt;&quot;</span><span class="p">;</span>
-    <span class="p">}</span>
-  
-     <span class="c1">// Build and HTML fragment of div, table, table body</span>
-    <span class="k">return</span> <span class="p">(</span>
-      <span class="s2">&quot;&lt;div style=&#39;&quot;</span> <span class="o">+</span> <span class="nx">style</span> <span class="o">+</span> <span class="s2">&quot;&#39;&gt;&quot;</span> <span class="o">+</span>
-        <span class="s2">&quot;&lt;table&gt;&quot;</span> <span class="o">+</span>
-          <span class="nx">body</span> <span class="o">+</span>
-        <span class="s2">&quot;&lt;/table&gt;&quot;</span> <span class="o">+</span>
-      <span class="s2">&quot;&lt;/div&gt;&quot;</span>
-    <span class="p">);</span>
-  
-  <span class="p">};</span>
-  
-  <span class="c1">// IJavaScript HTML processor receive parameter of defined HTML fragment</span>
-  <span class="nx">$$</span><span class="p">.</span><span class="nx">html</span><span class="p">(</span><span class="nx">compsci</span><span class="p">.</span><span class="nx">_toHtml</span><span class="p">());</span>
+    <span class="c1">// td for each column of data</span>
+    <span class="nx">body</span> <span class="o">+=</span> <span class="s2">&quot;&lt;td&gt;&quot;</span> <span class="o">+</span> <span class="nx">dress_list</span><span class="p">.</span><span class="nx">js</span><span class="p">[</span><span class="nx">row</span><span class="p">].</span><span class="nx">brand</span> <span class="o">+</span> <span class="s2">&quot;&lt;/td&gt;&quot;</span><span class="p">;</span>
+    <span class="nx">body</span> <span class="o">+=</span> <span class="s2">&quot;&lt;td&gt;&quot;</span> <span class="o">+</span> <span class="nx">dress_list</span><span class="p">.</span><span class="nx">js</span><span class="p">[</span><span class="nx">row</span><span class="p">].</span><span class="nx">color</span> <span class="o">+</span> <span class="s2">&quot;&lt;/td&gt;&quot;</span><span class="p">;</span>
+    <span class="nx">body</span> <span class="o">+=</span> <span class="s2">&quot;&lt;td&gt;&quot;</span> <span class="o">+</span> <span class="nx">dress_list</span><span class="p">.</span><span class="nx">js</span><span class="p">[</span><span class="nx">row</span><span class="p">].</span><span class="nx">price</span> <span class="o">+</span> <span class="s2">&quot;&lt;/td&gt;&quot;</span><span class="p">;</span>
+    <span class="nx">body</span> <span class="o">+=</span> <span class="s2">&quot;&lt;td&gt;&quot;</span> <span class="o">+</span> <span class="nx">dress_list</span><span class="p">.</span><span class="nx">js</span><span class="p">[</span><span class="nx">row</span><span class="p">].</span><span class="nx">fav</span> <span class="o">+</span> <span class="s2">&quot;&lt;/td&gt;&quot;</span><span class="p">;</span>
+    <span class="c1">// tr to end line</span>
+    <span class="nx">body</span> <span class="o">+=</span> <span class="s2">&quot;&lt;tr&gt;&quot;</span><span class="p">;</span>
+  <span class="p">}</span>
+
+   <span class="c1">// Build and HTML fragment of div, table, table body</span>
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="s2">&quot;&lt;div style=&#39;&quot;</span> <span class="o">+</span> <span class="nx">style</span> <span class="o">+</span> <span class="s2">&quot;&#39;&gt;&quot;</span> <span class="o">+</span>
+      <span class="s2">&quot;&lt;table&gt;&quot;</span> <span class="o">+</span>
+        <span class="nx">body</span> <span class="o">+</span>
+      <span class="s2">&quot;&lt;/table&gt;&quot;</span> <span class="o">+</span>
+    <span class="s2">&quot;&lt;/div&gt;&quot;</span>
+  <span class="p">);</span>
+
+<span class="p">};</span>
+
+<span class="c1">// IJavaScript HTML processor receive parameter of defined HTML fragment</span>
+<span class="nx">$$</span><span class="p">.</span><span class="nx">html</span><span class="p">(</span><span class="nx">dress_list</span><span class="p">.</span><span class="nx">_toHtml</span><span class="p">());</span>
 </pre></div>
 
     </div>
