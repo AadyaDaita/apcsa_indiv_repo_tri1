@@ -25,7 +25,7 @@
     
         ,"post2": {
             "title": "Implementation of JavaScript",
-            "content": "&lt;img id = “image1” src=”https://raw.githubusercontent.com/AadyaDaita/apcsa_indiv_repo_tri1/master/images/js%20implementation.jpg” .",
+            "content": "&lt;img id = “image” src=”https://github.com/AadyaDaita/apcsa_indiv_repo_tri1/blob/master/images/js_implementation.jpg?raw=true” . &lt;!–img id = “image1” src=”https://raw.githubusercontent.com/AadyaDaita/apcsa_indiv_repo_tri1/master/images/js%20implementation.jpg”&gt; .",
             "url": "https://aadyadaita.github.io/apcsa_indiv_repo_tri1/markdown/2022/09/25/js_html.html",
             "relUrl": "/markdown/2022/09/25/js_html.html",
             "date": " • Sep 25, 2022"
