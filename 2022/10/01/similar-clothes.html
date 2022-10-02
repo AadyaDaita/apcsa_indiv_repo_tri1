@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      10 min read
+      11 min read
     
 </span></p>
 
@@ -211,7 +211,6 @@ window.onload = wrap_img;
     <span class="kd">private</span> <span class="n">HttpStatus</span> <span class="n">status</span><span class="p">;</span> <span class="c1">//last run status</span>
     <span class="n">String</span> <span class="n">last_run</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span> <span class="c1">//last run day of month</span>
 
-    <span class="c1">// GET Covid 19 Stats</span>
     <span class="nd">@GetMapping</span><span class="p">(</span><span class="s">&quot;/monthly&quot;</span><span class="p">)</span>   <span class="c1">//added to end of prefix as endpoint</span>
 
     <span class="kd">public</span> <span class="n">ResponseEntity</span><span class="o">&lt;</span><span class="n">JSONObject</span><span class="o">&gt;</span> <span class="nf">kohls</span><span class="p">()</span> <span class="p">{</span>
@@ -263,6 +262,18 @@ window.onload = wrap_img;
 </div>
     
 
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Benefit of using and API?</strong></p>
+<p>When using an API managed by computers, less human effort is required and workflows can be easily updated to become faster and more productive. Furthermore, new content and information can be published and shared with your entire audience quickly and efficiently.</p>
+<p>APIs allow developers to be more productive by reusing code in complex but repetitive processes. They don’t need to start from scratch as the API specifies how to assemble software components in a program. APIs exist to make it easy to interface with other developers' applications.</p>
+<p>By using APIs by companies like Kohls, Amazon, or Twitter, we can integrate those many services into their own systems to make our site more interesting and engaging.</p>
+<p><strong>Benefit(s) of backend implementation?</strong></p>
+<p>Implementing APIs in backend allows us to control specific logistics about how the API is run, when otherwise, it would not be possible. For example, if there is a limit on how many times an API could be run, the backend code will make sure to not run the API past that limit. In my case, you can only run the API 500 times a month, so the backend code makes sure that it meets the limit.</p>
+
+</div>
+</div>
+</div>
 </div>
 
 
