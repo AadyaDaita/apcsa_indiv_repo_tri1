@@ -11,16 +11,7 @@ import java.io.PrintWriter;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-
-import javax.imageio.stream.ImageOutputStream;
-import javax.imageio.stream.ImageInputStream;
-import javax.imageio.metadata.IIOMetadata;
-import javax.imageio.IIOImage;
 import javax.imageio.ImageIO;
-import javax.imageio.ImageWriteParam;
-import javax.imageio.ImageWriter;
-import javax.imageio.ImageReader;
-import javax.imageio.ImageTypeSpecifier;
 
 public class Pics {
     private final String inDir = "images/"; // location of images
@@ -336,12 +327,12 @@ public class Pics {
     // tester/driver
     public static void main(String[] args) throws IOException {
         Pics MonaLisa = new Pics("MonaLisa", "png");
-        //MonaLisa.greyscale();
-        //MonaLisa.redscale();
-        //MonaLisa.greenscale();
-        //MonaLisa.bluescale();
+        MonaLisa.greyscale();
+        MonaLisa.redscale();
+        MonaLisa.greenscale();
+        MonaLisa.bluescale();
         MonaLisa.printStats("Original");
-        //MonaLisa.resize(33);
+        MonaLisa.resize(33);
         MonaLisa.printStats("Scaled");
         MonaLisa.convertToAscii();
     }
