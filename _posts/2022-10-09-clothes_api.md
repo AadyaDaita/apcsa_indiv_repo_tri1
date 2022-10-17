@@ -1,6 +1,9 @@
 ---
-title: Fetch of Backend Clothes
+title: Fetch of Backend Jokes
 layout: default
+description: An introductory example of Frontend talking to Backend Java application serving jokes.  
+permalink: /data/jokes
+image: /images/jokes.png
 categories: [1.C]
 tags: [javascript]
 ---
@@ -8,9 +11,9 @@ tags: [javascript]
 <table>
   <thead>
   <tr>
-    <th>Clothing Item</th>
-    <th>Buy</th>
-    <th>Skip</th>
+    <th>Joke</th>
+    <th>HaHa</th>
+    <th>Boohoo</th>
   </tr>
   </thead>
   <tbody id="result">
@@ -25,15 +28,15 @@ tags: [javascript]
   const resultContainer = document.getElementById("result");
 
   // keys for joke reactions
-  const BUY = "buy";
-  const SKIP = "skip";
+  const HAHA = "haha";
+  const BOOHOO = "boohoo";
 
   // prepare fetch urls
   // const url = "https://flask.nighthawkcodingsociety.com/api/jokes";
   const url = "https://spring.nighthawkcodingsociety.com/api/jokes";
   const get_url = url +"/";
-  const like_url = url + "/like/";  // buy reaction
-  const jeer_url = url + "/jeer/";  // skip reaction
+  const like_url = url + "/like/";  // haha reaction
+  const jeer_url = url + "/jeer/";  // boohoo reaction
 
   // prepare fetch GET options
   const options = {
@@ -66,35 +69,35 @@ tags: [javascript]
             const tr = document.createElement("tr");
             
             // td for joke cell
-            const item = document.createElement("td");
-              item.innerHTML = row.id + ". " + row.item;  // add fetched data to innerHTML
+            const joke = document.createElement("td");
+              joke.innerHTML = row.id + ". " + row.joke;  // add fetched data to innerHTML
 
-            // td for buy cell with onclick actions
-            const buy = document.createElement("td");
-              const buy_but = document.createElement('button');
-              buy_but.id = buy+row.id   // establishes a buy JS id for cell
-              buy_but.innerHTML = row.buy;  // add fetched "buy count" to innerHTML
-              buy_but.onclick = function () {
+            // td for haha cell with onclick actions
+            const haha = document.createElement("td");
+              const haha_but = document.createElement('button');
+              haha_but.id = HAHA+row.id   // establishes a HAHA JS id for cell
+              haha_but.innerHTML = row.haha;  // add fetched "haha count" to innerHTML
+              haha_but.onclick = function () {
                 // onclick function call with "like parameters"
-                reaction(buy, like_url+row.id, buy_but.id);  
+                reaction(HAHA, like_url+row.id, haha_but.id);  
               };
-              buy.appendChild(buy_but);  // add "buy button" to buy cell
+              haha.appendChild(haha_but);  // add "haha button" to haha cell
 
-            // td for skip cell with onclick actions
-            const skip = document.createElement("td");
-              const skip_but = document.createElement('button');
-              skip_but.id = skip+row.id  // establishes a skip JS id for cell
-              skip_but.innerHTML = row.skip;  // add fetched "skip count" to innerHTML
-              skip_but.onclick = function () {
+            // td for boohoo cell with onclick actions
+            const boohoo = document.createElement("td");
+              const boohoo_but = document.createElement('button');
+              boohoo_but.id = BOOHOO+row.id  // establishes a BOOHOO JS id for cell
+              boohoo_but.innerHTML = row.boohoo;  // add fetched "boohoo count" to innerHTML
+              boohoo_but.onclick = function () {
                 // onclick function call with "jeer parameters"
-                reaction(skip, jeer_url+row.id, skip_but.id);  
+                reaction(BOOHOO, jeer_url+row.id, boohoo_but.id);  
               };
-              skip.appendChild(skip_but);  // add "skip button" to skip cell
+              boohoo.appendChild(boohoo_but);  // add "boohoo button" to boohoo cell
              
             // this builds ALL td's (cells) into tr (row) element
-            tr.appendChild(item);
-            tr.appendChild(buy);
-            tr.appendChild(skip);
+            tr.appendChild(joke);
+            tr.appendChild(haha);
+            tr.appendChild(boohoo);
 
             // this adds all the tr (row) work above to the HTML "result" container
             resultContainer.appendChild(tr);
@@ -122,10 +125,10 @@ tags: [javascript]
       response.json().then(data => {
           console.log(data);
           // Likes or Jeers updated/incremented
-          if (type === buy) // like data element
-            document.getElementById(elemID).innerHTML = data.buy;  // fetched buy data assigned to buy Document Object Model (DOM)
-          else if (type === skip) // jeer data element
-            document.getElementById(elemID).innerHTML = data.skip;  // fetched skip data assigned to skip Document Object Model (DOM)
+          if (type === HAHA) // like data element
+            document.getElementById(elemID).innerHTML = data.haha;  // fetched haha data assigned to haha Document Object Model (DOM)
+          else if (type === BOOHOO) // jeer data element
+            document.getElementById(elemID).innerHTML = data.boohoo;  // fetched boohoo data assigned to boohoo Document Object Model (DOM)
           else
             error("unknown type: " + type);  // should never occur
       })
