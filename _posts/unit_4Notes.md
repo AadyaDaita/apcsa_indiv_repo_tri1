@@ -1,0 +1,32 @@
+---
+toc: true
+layout: post
+categories: [markdown]
+title: Unit 4 Notes
+---
+
+**Loops**
+
+- Loops to reduce the code
+- Writing code, and making it faster, instead of writing a tedious amount of code. 
+
+
+- While loop: while something is true, keeps repeating the segment inside it. Once it is no longer true, the loop exists. 
+
+
+- For Loop: will repeat the loop for a certain amount of time.
+
+- Recursion Loop: instead of any conditional, you repeat the code with a loop by calling on the function itself. 
+
+
+- Nested iteration: technique; loops within loops. May be used to loop through a 2D array. 
+
+<img src="images/notes7.png"/> 
+
+**Null**
+
+- If we create an object and set it to null, without using any “new” keywords or referencing any constructor, it will quite literally be set to nothing. It is still taking up storage in memory but it will not contain anything. 
+
+- It creates a reference to an object that takes up memory but is not exactly an object.
+
+- If you run a method on this object, since it is null, it isn’t an object, and it wouldn’t have any methods or constructors. So, if you run a method on it, it will return NullPointerExecption. 

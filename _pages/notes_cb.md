@@ -21,9 +21,9 @@ permalink: /notes/
    
   </tr>
   <tr>
-    <td>Unit 2</td>
-    <td> </td>
-    <td> </td>
+   <td>Unit 2</td>
+      <td><a href="https://aadyadaita.github.io/apcsa_indiv_repo_tri1/markdown/2022/08/22/primitives.html">Primitives and Wrapper Classes Notes</a></td>
+      <td><a href="https://aadyadaita.github.io/apcsa_indiv_repo_tri1/2022/08/24/score_calculator.html">Primitives and Wrapper Classes Code</a></td>
 
   </tr>
 </table>
@@ -36,10 +36,12 @@ permalink: /notes/
     <th>Notes</th>
   </tr>
   <tr>
-      <td>Unit 1 - Basics of Objects Oriented Programming </td>
+      <td>Basics of Objects Oriented Programming </td>
       <td><a href="https://aadyadaita.github.io/apcsa_indiv_repo_tri1/2022/09/05/Unit-1-Code.org-Vocab.html">OOP Notes</a></td>
-    
   </tr>
+
+  
+
 
 </table>
 
@@ -48,7 +50,42 @@ permalink: /notes/
 <table>
   <tr>
     <th>Topic</th>
-    <th>Notes</th>
+    <th>Application/Notes</th>
+  </tr>
+
+<tr>
+    <td>JavaScript with Lists </td>
+    <td><a href="#"> Producing a JS table with Dress List</a></td>
+  </tr>
+
+  <tr>
+    <td>RESTful API </td>
+    <td><a href="#"> RapidAPI Kohls Shppong API</a></td>
+  </tr>
+
+  <tr>
+    <td>Arrays and Images </td>
+    <td><a href="#"> Mona Lisa Images</a></td>
+  </tr>
+
+  <tr>
+    <td>Iteration + 2D arrays </td>
+    <td><a href="#"> Monekys Example</a></td>
+  </tr>
+
+  <tr>
+    <td>Website frontend </td>
+    <td><a href="#"> Brandy Melville Site Example</a></td>
+  </tr>
+
+ <tr>
+    <td>Frontend to Backend API </td>
+    <td><a href="#">Mr. Mort's Jokes API</a></td>
+  </tr>
+
+  <tr>
+    <td>Github </td>
+    <td><a href="#">GitHub Planning</a></td>
   </tr>
   <tr>
       <td>Markdown </td>
@@ -66,4 +103,6 @@ permalink: /notes/
     <td>Alumni </td>
     <td><a href="https://aadyadaita.github.io/apcsa_indiv_repo_tri1/markdown/2022/08/29/alumni_panel.html">Alumni Notes</a></td>
   </tr>
+
+  
 </table>

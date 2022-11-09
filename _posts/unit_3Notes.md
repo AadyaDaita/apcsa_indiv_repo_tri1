@@ -1,0 +1,29 @@
+---
+toc: true
+layout: post
+categories: [markdown]
+title: Unit 3 Notes
+---
+
+**Casting and Ranges of Variables**
+
+- That number is 23^2
+- The negative one is one larger because 0 is included.
+ 
+- Integers can be represented from -2^31 through (2^31-1) which would be 2^32 numbers total. We do minus one on the last number because 0 is included. 
+
+- Integer.MAX_VALUE and Integer.MIN_VALUE are in the Integer class. 
+
+- If you were to do the max number plus one, java will return the min value. Same with the min, if you did min number minus one, java will return the max number. This is because it is looping through a circle. This is an overflow error. 
+
+<img src="images/notes5.png"/>
+
+
+**Instantiation**
+
+- Basically when you create a class, you have to create the variables, which are the class attributes. And then in constructors, you set the value of those variables (attributes) to something. So you define them.
+
+- Below are three different constructors. The first one has no formal parameters because it is just a basic default employee. When you make an object using this, the values will be all the default values. The second two can be used to create actual employees with personalized data:
+
+<img src="images/notes6.png"/>
+
