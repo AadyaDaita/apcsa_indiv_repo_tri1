@@ -77,7 +77,7 @@ permalink: /notes/
 
   <tr>
     <td>RESTful API </td>
-    <td><a href="https://aadyadaita.github.io/apcsa_indiv_repo_tri1/2022/10/01/similar-clothes.html"> RapidAPI Kohls Shppong API</a></td>
+    <td><a href="https://aadyadaita.github.io/apcsa_indiv_repo_tri1/2022/10/01/similar-clothes.html"> RapidAPI Kohls Shopping API</a></td>
   </tr>
 
   <tr>
