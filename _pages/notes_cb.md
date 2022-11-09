@@ -16,38 +16,44 @@ permalink: /notes/
   </tr>
   <tr>
     <td>Unit 1</td>
-      <td><a href="https://aadyadaita.github.io/apcsa_indiv_repo_tri1/markdown/2022/08/22/primitives.html">Primitives and Wrapper Classes Notes</a></td>
-      <td><a href="https://aadyadaita.github.io/apcsa_indiv_repo_tri1/2022/08/24/score_calculator.html">Primitives and Wrapper Classes Code</a></td>
+      <td><a href="https://aadyadaita.github.io/apcsa_indiv_repo_tri1/markdown/2022/08/22/primitives.html">Primitives and Wrapper Classes Unit 1 Notes</a></td>
+      <td><a href="https://aadyadaita.github.io/apcsa_indiv_repo_tri1/2022/08/24/score_calculator.html">Primitives and Wrapper Classes Unit 1 Code</a></td>
    
   </tr>
   <tr>
    <td>Unit 2</td>
-      <td><a href="#">Unit 2 Notes</a></td>
-      <td><a href="https://aadyadaita.github.io/apcsa_indiv_repo_tri1/2022/10/16/Unit2_app.html">Unit 2 Appilication</a></td>
+      <td><a href="https://aadyadaita.github.io/apcsa_indiv_repo_tri1/markdown/2022/11/08/unit_2Notes.html">Unit 2 Notes</a></td>
+      <td><a href="https://aadyadaita.github.io/apcsa_indiv_repo_tri1/2022/10/22/Unit2.html">Unit 2 Appilication</a></td>
   </tr>
 
   <tr>
    <td>Unit 3</td>
-      <td><a href="#">Unit 3 Notes</a></td>
+      <td><a href="https://aadyadaita.github.io/apcsa_indiv_repo_tri1/markdown/2022/11/08/unit_3Notes.html">Unit 3 Notes</a></td>
       <td><a href="https://aadyadaita.github.io/apcsa_indiv_repo_tri1/2022/10/22/Unit3.html">Unit 3 Appilication</a></td>
   </tr>
 
   <tr>
    <td>Unit 4</td>
-      <td><a href="#">Unit 4 Notes</a></td>
+      <td><a href="https://aadyadaita.github.io/apcsa_indiv_repo_tri1/markdown/2022/11/08/unit_4Notes.html">Unit 4 Notes</a></td>
       <td><a href="https://aadyadaita.github.io/apcsa_indiv_repo_tri1/2022/10/22/Unit4.html">Unit 4 Appilication</a></td>
   </tr>
 
   <tr>
    <td>Unit 5</td>
-      <td><a href="#">Unit 5 Notes</a></td>
+      <td><a href="https://aadyadaita.github.io/apcsa_indiv_repo_tri1/markdown/2022/11/08/unit_5Notes.html">Unit 5 Notes</a></td>
       <td><a href="https://aadyadaita.github.io/apcsa_indiv_repo_tri1/2022/10/22/Unit5.html">Unit 5 Appilication</a></td>
   </tr>
 
   <tr>
    <td>Unit 6</td>
-      <td><a href="#">Unit 6 Notes</a></td>
+      <td><a href="https://aadyadaita.github.io/apcsa_indiv_repo_tri1/markdown/2022/11/08/unit_6Notes.html">Unit 6 Notes</a></td>
       <td><a href="https://aadyadaita.github.io/apcsa_indiv_repo_tri1/2022/10/25/Unit6.html">Unit 6 Appilication</a></td>
+  </tr>
+
+   <tr>
+   <td>Unit 1-6 College Board MC</td>
+      <td><a href="https://aadyadaita.github.io/apcsa_indiv_repo_tri1/markdown/2022/11/08/cb_quiz_reflection.html">Reflection</a></td>
+      <td>Score: 35/40</td>
   </tr>
 
 
