@@ -17,6 +17,7 @@ title: College Board MC Reflection
 - D - Incorrect. This will print 4, 16, 64, since k is assigned the value of k * 4 for each iteration.
 
 - E - Correct. The original code segment prints all values between 1 and 100 that are evenly divisible by 4. The following values are printed: 4, 8, 12, 16, 20, 24, 28, 32, 36, 40, 44, 48, 52, 56, 60, 64, 68, 72, 76, 80, 84, 88, 92, 96, and 100. Choice E shows these values can also be printed by having a for loop that has a loop control variable k that starts at 4, increments by 4, and terminates when k is greater than 100.
+![quiz1](https://user-images.githubusercontent.com/89221238/200909499-e6874978-7430-4d42-a7ad-7bac5938bd92.png)
 
 
 
@@ -30,6 +31,8 @@ title: College Board MC Reflection
 - D - Correct. The enhanced for loop iterates over the array oldArray. In the first iteration, newArray[0][0] is assigned the value 1. The value of row is incremented to 1. Since 1 % 3 does not equal 0, the statements in the if are not executed. In the next iteration, newArray[1][0] is assigned the value 2. The value of row is incremented to 2. The algorithm continues to fill column 0 with the subsequent values of oldArray. Once row is 3, the if condition is true and row is assigned 0 and col is incremented to 1. The algorithm proceeds to fill column 1. When the for loop terminates, newArray contains the following values { {1, 4, 7}, {2, 5, 8}, {3, 6, 9} }. The value of newArray[0][2] is 7.
 
 - E - Incorrect. The row and column indices for 2D arrays start at 0. The value 8 is at newArray[1][2].
+![quiz2](https://user-images.githubusercontent.com/89221238/200909541-3790f7ba-89be-49ac-9763-59c8c8ec6cd8.png)
+
 
 
 **Question 19**
@@ -43,6 +46,9 @@ title: College Board MC Reflection
 
 - E - Incorrect. The opposite of !(a != b) is just (a != b). When you apply De Morgan’s Law the logic operator and (&&) becomes an or (||) and vice versa. The opposite of (b > 7) is (b <= 7).
 
+![quiz3](https://user-images.githubusercontent.com/89221238/200909593-05b56a62-16ae-402a-aed4-1cb062e9490a.png)
+
+
 **Question 14**
 - A - Incorrect. The scope of variable j is in the first for loop since j is declared in the loop header. Once the first for loop has terminated, the variable j no longer exists.
 
@@ -53,6 +59,7 @@ title: College Board MC Reflection
 - D - Correct. In the first for loop, all the values from a1 are copied over to result at corresponding indices. At this point, the elements at index 0 through a1.length – 1 are full. The first index where the first element of a2 should be copied into is a1.length. We can use the loop control variable k to access all the elements in a2 and k + a1.length to access the corresponding elements in result.
 
 - E - Incorrect. This will cause the value of result[a1.length] to remain 0,the default initial value for elements in an array of type int. Additionally, when k has the value a2.length – 1, the program will attempt to access the element result[a2.length – 1  + a1.length + 1] or result[a2.length + a1.length] and an ArrayIndexOutOfBoundsException will be thrown.
+![quiz4](https://user-images.githubusercontent.com/89221238/200909667-0268be78-45e1-4194-83cf-8d8f1ea63912.png)
 
 
 **Question 4**
@@ -65,3 +72,4 @@ title: College Board MC Reflection
 - D - Incorrect. This would be the result if the expression x / y was y / x instead.
 
 - E - Incorrect. This would be the result if the expression x / y was x % y instead.
+![quiz5](https://user-images.githubusercontent.com/89221238/200909695-4a513396-c8ab-4fbe-954b-fad784fdbe86.png)
