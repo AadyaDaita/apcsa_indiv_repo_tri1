@@ -134,7 +134,7 @@
   
     
         ,"post12": {
-            "title": "Unit 2 Application - 2006 FRQ",
+            "title": "Unit 1 Application - 2006 FRQ",
             "content": "2a . public double purchasePrice(){ double purchasePrice; rate = 1 + taxRate; purchasePrice = getListPrice * rate; return purchasePrice; } . 3a . public int compareCustomer(Customer other){ String person1_name = this.getName(); Integer person1_id = this.getID(); String person2_name = other.getName(); Integer person2_id = other.getID(); String[] names = {person1_name, person2_name}; String[] ids = {person1_id, person2_id}; Arrays.sort(names); Arrays.sort(ids); if (names[0] == names[1]){ return 0 } if (names[0] == person1_name){ return -1 } if (names[1] == person1_name){ return 1 } } . System.out.println(stringCompare(&quot;hi&quot;, &quot;hello&quot;)); .",
             "url": "https://aadyadaita.github.io/apcsa_indiv_repo_tri1/2022/10/22/Unit2.html",
             "relUrl": "/2022/10/22/Unit2.html",
@@ -416,7 +416,7 @@
   
       ,"page2": {
           "title": "Notes",
-          "content": "College Board . Topic College Board Unit Notes Usage . Unit 1 | Primitives and Wrapper Classes Unit 1 Notes | Primitives and Wrapper Classes Unit 1 Code | . Unit 2 | Unit 2 Notes | Unit 2 Appilication | . Unit 3 | Unit 3 Notes | Unit 3 Appilication | . Unit 4 | Unit 4 Notes | Unit 4 Appilication | . Unit 5 | Unit 5 Notes | Unit 5 Appilication | . Unit 6 | Unit 6 Notes | Unit 6 Appilication | . Unit 1-6 College Board MC | Reflection | Score: 35/40 | . PBL Lessons . Topic Application/Notes . JavaScript with Lists | Producing a JS table with Dress List | . RESTful API | RapidAPI Kohls Shopping API | . Arrays and Images | Mona Lisa Images | . Iteration + 2D arrays | Monkeys Example | . Website frontend | Brandy Melville Site Example | . Frontend to Backend API | Mr. Mort&#39;s Jokes API | . Github | GitHub Planning | . Markdown | Markdown Files | . Bash &amp; Checks | Bash and Shell Script Notes | . Alumni | Alumni Notes | . Code.org Vocab . Unit Notes . Basics of Objects Oriented Programming | OOP Notes | .",
+          "content": "College Board . Topic College Board Unit Notes Usage . Unit 1 | Primitives and Wrapper Classes Unit 1 Notes | Primitives and Wrapper Classes Unit 1 Code and Unit 1 | . Unit 2 | Unit 2 Notes | Unit 2 Appilication | . Unit 3 | Unit 3 Notes | Unit 3 Appilication | . Unit 4 | Unit 4 Notes | Unit 4 Appilication | . Unit 5 | Unit 5 Notes | Unit 5 Appilication | . Unit 6 | Unit 6 Notes | Unit 6 Appilication | . Unit 1-6 College Board MC | Reflection | Score: 35/40 | . PBL Lessons . Topic Application/Notes . JavaScript with Lists | Producing a JS table with Dress List | . RESTful API | RapidAPI Kohls Shopping API | . Arrays and Images | Mona Lisa Images | . Iteration + 2D arrays | Monkeys Example | . Website frontend | Brandy Melville Site Example | . Frontend to Backend API | Mr. Mort&#39;s Jokes API | . Github | GitHub Planning | . Markdown | Markdown Files | . Bash &amp; Checks | Bash and Shell Script Notes | . Alumni | Alumni Notes | . Code.org Vocab . Unit Notes . Basics of Objects Oriented Programming | OOP Notes | .",
           "url": "https://aadyadaita.github.io/apcsa_indiv_repo_tri1/notes/",
           "relUrl": "/notes/",
           "date": ""
