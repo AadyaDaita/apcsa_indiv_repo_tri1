@@ -4,9 +4,9 @@
         "post0": {
             "title": "Unit 1 Code.org Vocab",
             "content": "Object Oriented Programming Basic Vocab . attribute - a characteristic of an object . | behavior - an action that an object can perform . | class - a programmer-defined blueprint from which objects are created . | constructor - a block of code that has the same name as the class and tells the computer how to create a new object . | debugging - finding and fixing problems in an algorithm or program . | instantiate - to call the constructor to create an object . | object - an instance of a class . | object-oriented programming - an approach to creating and using models of physical or imagined objects . | state - the attributes of an object that are represented by its instance variables . | constructor signature - the first line of the constructor which includes the public keyword, the constructor name, and the values to specify when an object is created . | inheritance - an object-oriented programming principle where a subclass inherits the attributes and behaviors of a superclass . | subclass - a class that extends a superclass and inherits its attributes and behaviors . | superclass - a class that can be extended to create subclasses . | method signature - consists of a name and parameter list . | Method Decomposition - the process of breaking a problem down into smaller parts to write methods for each part . | edge case - a bug that occurs at the highest or lowest end of a range of possible values or in extreme situations . | redundant code - code that is unnecessary . | inheritance hierarchy - where a class serves as a superclass for more than one subclass . | . . .",
-            "url": "https://aadyadaita.github.io/apcsa_indiv_repo_tri1/2022/11/28/Unit-1-Code.org-Vocab.html",
-            "relUrl": "/2022/11/28/Unit-1-Code.org-Vocab.html",
-            "date": " • Nov 28, 2022"
+            "url": "https://aadyadaita.github.io/apcsa_indiv_repo_tri1/2022/12/01/Unit-1-Code.org-Vocab.html",
+            "relUrl": "/2022/12/01/Unit-1-Code.org-Vocab.html",
+            "date": " • Dec 1, 2022"
         }
         
     
