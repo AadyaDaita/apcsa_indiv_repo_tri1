@@ -7,7 +7,9 @@ permalink: /notes/
 
 ### College Board 
 
-ALL VOCAB: 
+<a href="https://aadyadaita.github.io/apcsa_indiv_repo_tri1/2022/12/01/all-vocab.html"> ALL VOCAB </a>
+
+
 
 <table>
   <tr>
