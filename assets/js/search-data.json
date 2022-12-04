@@ -2,10 +2,10 @@
   
     
         "post0": {
-            "title": "Unit_7notes",
-            "content": ". toc: true layout: post categories: [markdown] title: Unit 6 Notes — . Primitive data - int, double, float Non primitive - String, Integer, class . In java, you need to declare and initialize, like shown: example: int[] int = new int[10] . Errors: Accessing values where the element does not exist. . Different from arrays, as it provides more felxibility about adding, and deleting items from the list. . Traverse an ArrayList . can use any type of loop to go through an array, and also to go in reverse. | Traversing through as array list can be done with loops and recursion loops Enhanced for-loop can be used as well | . | . Developigng Algorigthms using Arrays: . Uses of ArrayList is finding the minimum and maximum of an array list | Example of how an array list is created: | . ArrayList cars = new ArrayList(); .",
-            "url": "https://aadyadaita.github.io/apcsa_indiv_repo_tri1/2022/12/04/unit_7Notes.html",
-            "relUrl": "/2022/12/04/unit_7Notes.html",
+            "title": "Unit 6 Notes",
+            "content": "Primitive data - int, double, float Non primitive - String, Integer, class . In java, you need to declare and initialize, like shown: example: int[] int = new int[10] . Errors: Accessing values where the element does not exist. . Different from arrays, as it provides more felxibility about adding, and deleting items from the list. . Traverse an ArrayList . can use any type of loop to go through an array, and also to go in reverse. | Traversing through as array list can be done with loops and recursion loops Enhanced for-loop can be used as well | . | . Developigng Algorigthms using Arrays: . Uses of ArrayList is finding the minimum and maximum of an array list | Example of how an array list is created: | . ArrayList cars = new ArrayList(); .",
+            "url": "https://aadyadaita.github.io/apcsa_indiv_repo_tri1/markdown/2022/12/04/unit_7Notes.html",
+            "relUrl": "/markdown/2022/12/04/unit_7Notes.html",
             "date": " • Dec 4, 2022"
         }
         
