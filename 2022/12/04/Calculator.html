@@ -434,20 +434,26 @@ window.onload = wrap_img;
          <span class="n">Calculator</span> <span class="n">divisionMath</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Calculator</span><span class="p">(</span><span class="s">&quot;300/200&quot;</span><span class="p">);</span>
          <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Division Math\n&quot;</span> <span class="o">+</span> <span class="n">divisionMath</span><span class="p">);</span>
 
+         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
          <span class="n">Calculator</span> <span class="n">unfinished_paranthesis</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Calculator</span><span class="p">(</span><span class="s">&quot;(27/3&quot;</span><span class="p">);</span>
          <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Division Math\n&quot;</span> <span class="o">+</span> <span class="n">unfinished_paranthesis</span><span class="p">);</span>
 
+         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
          <span class="n">Calculator</span> <span class="n">exponent</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Calculator</span><span class="p">(</span><span class="s">&quot;2^8&quot;</span><span class="p">);</span>
          <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Exponent Math\n&quot;</span> <span class="o">+</span> <span class="n">exponent</span><span class="p">);</span>
+
+         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
 
          <span class="n">Calculator</span> <span class="n">sqrt</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Calculator</span><span class="p">(</span><span class="s">&quot;125R3&quot;</span><span class="p">);</span>
          <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Exponent Math\n&quot;</span> <span class="o">+</span> <span class="n">sqrt</span><span class="p">);</span>
 
+         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
          <span class="n">Scanner</span> <span class="n">myObj</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>  <span class="c1">// Create a Scanner object     </span>
          <span class="n">String</span> <span class="n">expression_user</span> <span class="o">=</span> <span class="n">myObj</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span>  <span class="c1">// Read user input</span>
          <span class="n">Calculator</span> <span class="n">input</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Calculator</span><span class="p">(</span><span class="n">expression_user</span><span class="p">);</span>
          <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Exponent Math\n&quot;</span> <span class="o">+</span> <span class="n">input</span><span class="p">);</span>
         
+         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
  
 
     <span class="p">}</span>
@@ -505,6 +511,7 @@ Original expression: 300/200
 Tokenized expression: [300, /, 200]
 Reverse Polish Notation: [300, 200, /]
 Final result: 1.50
+
 (27/3
 [(, 27, /, 3]
 error with paranthesis
@@ -513,6 +520,7 @@ Original expression: (27/3
 Tokenized expression: [(, 27, /, 3]
 Reverse Polish Notation: []
 Final result: 0.00
+
 2^8
 [2, ^, 8]
 Exponent Math
@@ -520,6 +528,7 @@ Original expression: 2^8
 Tokenized expression: [2, ^, 8]
 Reverse Polish Notation: [2, 8, ^]
 Final result: 256.00
+
 125R3
 [125, R, 3]
 Exponent Math
@@ -527,6 +536,7 @@ Original expression: 125R3
 Tokenized expression: [125, R, 3]
 Reverse Polish Notation: [125, 3, R]
 Final result: 5.00
+
 3^4
 [3, ^, 4]
 Exponent Math
@@ -534,6 +544,7 @@ Original expression: 3^4
 Tokenized expression: [3, ^, 4]
 Reverse Polish Notation: [3, 4, ^]
 Final result: 81.00
+
 </pre>
 </div>
 </div>
