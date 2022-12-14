@@ -132,7 +132,84 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;hello&quot;</span><span class="p">)</span>
+<div class=" highlight hl-java"><pre><span></span><span class="kd">class</span> <span class="nc">Worldcup</span> <span class="p">{</span> <span class="c1">//superclass</span>
+    <span class="kt">int</span> <span class="n">wins</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>        
+    <span class="kt">int</span> <span class="n">losses</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>                   
+    <span class="kt">boolean</span> <span class="n">popular</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+    <span class="n">String</span> <span class="n">jersey_color</span> <span class="o">=</span> <span class="s">&quot;blue&quot;</span><span class="p">;</span>
+
+    <span class="kd">public</span> <span class="nf">Worldcup</span><span class="p">(</span><span class="kt">int</span> <span class="n">wins</span><span class="p">,</span> <span class="kt">int</span> <span class="n">losses</span><span class="p">,</span> <span class="kt">boolean</span> <span class="n">popular</span><span class="p">,</span> <span class="n">String</span> <span class="n">jersey_color</span><span class="p">){</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">wins</span> <span class="o">=</span> <span class="n">wins</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">losses</span> <span class="o">=</span> <span class="n">losses</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">popular</span> <span class="o">=</span> <span class="n">popular</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">jersey_color</span> <span class="o">=</span> <span class="n">jersey_color</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">toString</span><span class="p">(){</span>
+        <span class="k">return</span> <span class="s">&quot;Wins: &quot;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="na">wins</span> <span class="o">+</span> <span class="s">&quot;, Losses: &quot;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="na">losses</span> <span class="o">+</span> <span class="s">&quot;, Popular?: &quot;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="na">popular</span> <span class="o">+</span> <span class="s">&quot;, Jersey Color: &quot;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="na">jersey_color</span><span class="p">;</span>
+    <span class="p">}</span>
+
+  <span class="p">}</span>
+  
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Argentina</span> <span class="kd">extends</span> <span class="n">Worldcup</span><span class="p">{</span>
+<span class="kd">public</span> <span class="nf">Argentina</span><span class="p">(</span><span class="kt">int</span> <span class="n">wins</span><span class="p">,</span> <span class="kt">int</span> <span class="n">losses</span><span class="p">,</span> <span class="kt">boolean</span> <span class="n">popular</span><span class="p">,</span> <span class="n">String</span> <span class="n">jersey_color</span><span class="p">){</span>
+    <span class="kd">super</span><span class="p">(</span><span class="n">wins</span><span class="p">,</span> <span class="n">losses</span><span class="p">,</span> <span class="n">popular</span><span class="p">,</span> <span class="n">jersey_color</span><span class="p">);</span> <span class="c1">// superclass constructor</span>
+<span class="p">}</span>
+<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">Argentina</span> <span class="n">argentina_obj</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Argentina</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="kc">true</span><span class="p">,</span><span class="s">&quot;blue&quot;</span><span class="p">);</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">argentina_obj</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="p">}</span>
+
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Brazil</span> <span class="kd">extends</span> <span class="n">Worldcup</span><span class="p">{</span>
+    <span class="kd">public</span> <span class="nf">Brazil</span><span class="p">(</span><span class="kt">int</span> <span class="n">wins</span><span class="p">,</span> <span class="kt">int</span> <span class="n">losses</span><span class="p">,</span> <span class="kt">boolean</span> <span class="n">popular</span><span class="p">,</span> <span class="n">String</span> <span class="n">jersey_color</span><span class="p">){</span>
+        <span class="kd">super</span><span class="p">(</span><span class="n">wins</span><span class="p">,</span> <span class="n">losses</span><span class="p">,</span> <span class="n">popular</span><span class="p">,</span> <span class="n">jersey_color</span><span class="p">);</span> <span class="c1">// superclass constructor</span>
+    <span class="p">}</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">Brazil</span> <span class="n">brazil</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Brazil</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="kc">true</span><span class="p">,</span><span class="s">&quot;yellow&quot;</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">brazil</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="p">}</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Morroco</span> <span class="kd">extends</span> <span class="n">Worldcup</span><span class="p">{</span>
+    <span class="kd">public</span> <span class="nf">Morroco</span><span class="p">(</span><span class="kt">int</span> <span class="n">wins</span><span class="p">,</span> <span class="kt">int</span> <span class="n">losses</span><span class="p">,</span> <span class="kt">boolean</span> <span class="n">popular</span><span class="p">,</span> <span class="n">String</span> <span class="n">jersey_color</span><span class="p">){</span>
+        <span class="kd">super</span><span class="p">(</span><span class="n">wins</span><span class="p">,</span> <span class="n">losses</span><span class="p">,</span> <span class="n">popular</span><span class="p">,</span> <span class="n">jersey_color</span><span class="p">);</span> <span class="c1">// superclass constructor</span>
+    <span class="p">}</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">Morroco</span> <span class="n">Morroco</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Morroco</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="kc">false</span><span class="p">,</span><span class="s">&quot;orange&quot;</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">Morroco</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="p">}</span>
+
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">France</span> <span class="kd">extends</span> <span class="n">Worldcup</span><span class="p">{</span>
+    <span class="kd">public</span> <span class="nf">France</span><span class="p">(</span><span class="kt">int</span> <span class="n">wins</span><span class="p">,</span> <span class="kt">int</span> <span class="n">losses</span><span class="p">,</span> <span class="kt">boolean</span> <span class="n">popular</span><span class="p">,</span> <span class="n">String</span> <span class="n">jersey_color</span><span class="p">){</span>
+        <span class="kd">super</span><span class="p">(</span><span class="n">wins</span><span class="p">,</span> <span class="n">losses</span><span class="p">,</span> <span class="n">popular</span><span class="p">,</span> <span class="n">jersey_color</span><span class="p">);</span> <span class="c1">// superclass constructor</span>
+    <span class="p">}</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">France</span> <span class="n">France</span> <span class="o">=</span> <span class="k">new</span> <span class="n">France</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="kc">true</span><span class="p">,</span><span class="s">&quot;red&quot;</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">France</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="p">}</span>
+
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Croatia</span> <span class="kd">extends</span> <span class="n">Worldcup</span><span class="p">{</span>
+    <span class="kd">public</span> <span class="nf">Croatia</span><span class="p">(</span><span class="kt">int</span> <span class="n">wins</span><span class="p">,</span> <span class="kt">int</span> <span class="n">losses</span><span class="p">,</span> <span class="kt">boolean</span> <span class="n">popular</span><span class="p">,</span> <span class="n">String</span> <span class="n">jersey_color</span><span class="p">){</span>
+        <span class="kd">super</span><span class="p">(</span><span class="n">wins</span><span class="p">,</span> <span class="n">losses</span><span class="p">,</span> <span class="n">popular</span><span class="p">,</span> <span class="n">jersey_color</span><span class="p">);</span> <span class="c1">// superclass constructor</span>
+    <span class="p">}</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">Croatia</span> <span class="n">Croatia</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Croatia</span><span class="p">(</span><span class="mi">90</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="kc">false</span><span class="p">,</span><span class="s">&quot;dark blue&quot;</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">Croatia</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="p">}</span>
+
+
+  <span class="n">Argentina</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+  <span class="n">Brazil</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+  <span class="n">Morroco</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+  <span class="n">France</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+  <span class="n">Croatia</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
 </pre></div>
 
     </div>
