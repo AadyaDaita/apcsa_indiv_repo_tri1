@@ -1,6 +1,6 @@
 version: "3"
 services:
-  fastpages: &fastpages
+  fastpages: fastpages
     working_dir: /data
     environment:
         - INPUT_BOOL_SAVE_MARKDOWN=false
