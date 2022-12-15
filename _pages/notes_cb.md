@@ -59,12 +59,6 @@ permalink: /notes/
       <td>0.9</td>
   </tr>
 
-  <tr>
-   <td>Unit 6</td>
-      <td><a href="https://aadyadaita.github.io/apcsa_indiv_repo_tri1/markdown/2022/11/08/unit_6Notes.html">Unit 6 Notes</a></td>
-      <td><a href="https://aadyadaita.github.io/apcsa_indiv_repo_tri1/2022/10/25/Unit6.html">Unit 6 Appilication</a></td>
-      <td>n/a</td>
-  </tr>
 
    <tr>
    <td>Unit 1-6 College Board MC</td>
@@ -73,6 +67,35 @@ permalink: /notes/
       <td>n/a</td>
   </tr>
 
+  <tr>
+   <td>Unit 6</td>
+      <td><a href="https://aadyadaita.github.io/apcsa_indiv_repo_tri1/markdown/2022/11/08/unit_6Notes.html">Unit 6 Notes</a></td>
+      <td><a href="https://aadyadaita.github.io/apcsa_indiv_repo_tri1/2022/10/25/Unit6.html">Unit 6 Appilication</a></td>
+      <td>not recieved yet</td>
+  </tr>
+
+  <tr>
+   <td>Unit 7</td>
+      <td><a href="https://aadyadaita.github.io/apcsa_indiv_repo_tri1/markdown/2022/12/04/unit_7Notes.html">Unit 7 Notes</a></td>
+      <td><a href="https://aadyadaita.github.io/apcsa_indiv_repo_tri1/2022/12/04/Unit7_hw.html">Unit 7 Appilication</a></td>
+      <td>0.85</td>
+  </tr>
+
+
+  <tr>
+   <td>Unit 8</td>
+      <td><a href="https://aadyadaita.github.io/apcsa_indiv_repo_tri1/markdown/2022/12/06/unit_8Notes.html">Unit 8 Notes</a></td>
+      <td><a href="https://aadyadaita.github.io/apcsa_indiv_repo_tri1/2022/12/06/Unit8.html">Unit 8 Appilication</a></td>
+      <td>1</td>
+  </tr>
+
+
+   <tr>
+   <td>Unit 9</td>
+      <td><a href="https://aadyadaita.github.io/apcsa_indiv_repo_tri1/markdown/2022/12/12/Inheritance.html">Unit 9 Notes</a></td>
+      <td><a href="https://aadyadaita.github.io/apcsa_indiv_repo_tri1/2022/12/13/Unit9.html">Unit 9 Appilication</a></td>
+      <td> 1</td>
+  </tr>
 
 
 </table>
