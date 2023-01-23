@@ -20,6 +20,7 @@ title: College Board MC Reflection Quiz 2
 
 - E - Correct. The given code segment starts when k is 1 and prints every other value as long as k is less than or equal to 7. This code segment starts when k is 1 and prints every other value as long as k is less than or equal to 8. Both code segments print 1357.
 
+![cb1](https://user-images.githubusercontent.com/89221238/214003507-695cb653-7396-4256-84a3-816ac9f1ce4e.png)
 
 
 **Question 37**
@@ -33,6 +34,7 @@ title: College Board MC Reflection Quiz 2
 
 - E - Correct. In the body of the first if clause in the code segment, b1 retains the value true if num is between 0 and 100, exclusive. In the body of the else clause, b1 retains the value true if num is less than -100. The statement assigns true to b2 if num is less than -100 or between 0 and 100, exclusive.
 
+![cb2](https://user-images.githubusercontent.com/89221238/214003538-b7f2c469-1432-411b-898f-a1748bb13dbb.png)
 
 
 
@@ -41,7 +43,7 @@ title: College Board MC Reflection Quiz 2
 
 - B - Correct. This options correctly checks whether numVals is 1, and then accesses the elements in nums array
 
-
+![cb3](https://user-images.githubusercontent.com/89221238/214003567-a0415d41-417b-4b80-ae7b-b42bfe3f9ce6.png)
 
 **Question 44**
 - A - Incorrect. A constructor signature consists of the constructor name and the parameter list. A correct constructor header does not include a return type.
@@ -53,7 +55,7 @@ title: College Board MC Reflection Quiz 2
 - D - Correct. The variables n1 and n2 are not instance variables of the Points class, nor are they defined in the incrementPoints method. The instance variables num1 and num2 should have been used instead of n1 and n2.
 
 - E - Incorrect. The variable value is the parameter passed to the incrementPoints method.
-
+![cb4](https://user-images.githubusercontent.com/89221238/214003615-d3c30ad0-dceb-451f-a320-4b5d7c3b570c.png)
 
 **Question 52**
 - A - Incorrect. This line of code increases the value of surcharge by adding price to it; although the revised code will compile, this is not the intended behavior.
@@ -65,6 +67,7 @@ title: College Board MC Reflection Quiz 2
 - D - Incorrect. A method definition must specify a return type; failing to do so will cause a compilation error.
 
 - E - Incorrect. Although the revised code will compile, it will not perform as intended because the statement on line 14 does not change the value of price.
+![cb5](https://user-images.githubusercontent.com/89221238/214003662-d3a73c89-1f45-43f7-97b9-00f07fadc72f.png)
 
 
 **Question 59**
@@ -77,3 +80,6 @@ title: College Board MC Reflection Quiz 2
 - D - Incorrect. Choice I will return the correct value if the element in the array with one element was target. In this case, with the first call to seqSearchRecHelper the value of data[0] would be target and 0 would be returned.
 
 - E - Incorrect. Choice I will return the correct value if the element in the array with one element was target. In this case, with the first call to seqSearchRecHelper the value of data[0] would be target and 0 would be returned. Choice III will correctly return the index of the element closest to the end of the array with the value target, since data[last] == target will be true at some valid index value of last.
+
+
+![cb6](https://user-images.githubusercontent.com/89221238/214003687-895c0977-1c36-40cf-85a4-26dee272b4c6.png)
