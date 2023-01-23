@@ -20,8 +20,6 @@ title: College Board MC Reflection Quiz 2
 
 - E - Correct. The given code segment starts when k is 1 and prints every other value as long as k is less than or equal to 7. This code segment starts when k is 1 and prints every other value as long as k is less than or equal to 8. Both code segments print 1357.
 
-![quiz1](https://user-images.githubusercontent.com/89221238/200909499-e6874978-7430-4d42-a7ad-7bac5938bd92.png)
-
 
 
 **Question 37**
@@ -35,7 +33,6 @@ title: College Board MC Reflection Quiz 2
 
 - E - Correct. In the body of the first if clause in the code segment, b1 retains the value true if num is between 0 and 100, exclusive. In the body of the else clause, b1 retains the value true if num is less than -100. The statement assigns true to b2 if num is less than -100 or between 0 and 100, exclusive.
 
-![quiz2](https://user-images.githubusercontent.com/89221238/200909541-3790f7ba-89be-49ac-9763-59c8c8ec6cd8.png)
 
 
 
@@ -44,7 +41,6 @@ title: College Board MC Reflection Quiz 2
 
 - B - Correct. This options correctly checks whether numVals is 1, and then accesses the elements in nums array
 
-![quiz3](https://user-images.githubusercontent.com/89221238/200909593-05b56a62-16ae-402a-aed4-1cb062e9490a.png)
 
 
 **Question 44**
@@ -58,8 +54,6 @@ title: College Board MC Reflection Quiz 2
 
 - E - Incorrect. The variable value is the parameter passed to the incrementPoints method.
 
-![quiz4](https://user-images.githubusercontent.com/89221238/200909667-0268be78-45e1-4194-83cf-8d8f1ea63912.png)
-
 
 **Question 52**
 - A - Incorrect. This line of code increases the value of surcharge by adding price to it; although the revised code will compile, this is not the intended behavior.
@@ -72,7 +66,6 @@ title: College Board MC Reflection Quiz 2
 
 - E - Incorrect. Although the revised code will compile, it will not perform as intended because the statement on line 14 does not change the value of price.
 
-![quiz5](https://user-images.githubusercontent.com/89221238/200909695-4a513396-c8ab-4fbe-954b-fad784fdbe86.png)
 
 **Question 59**
 - A - Incorrect. Choice I will return the correct value if the element in the array with one element was target. In this case, with the first call to seqSearchRecHelper the value of data[0] would be target and 0 would be returned. Choice II will eventually cause an ArrayIndexOutOfBoundsException to be thrown when the recursive call is made with target and -1. This will happen after every valid index in data has been examined. During this call, data[-1] is out of bounds.
@@ -84,5 +77,3 @@ title: College Board MC Reflection Quiz 2
 - D - Incorrect. Choice I will return the correct value if the element in the array with one element was target. In this case, with the first call to seqSearchRecHelper the value of data[0] would be target and 0 would be returned.
 
 - E - Incorrect. Choice I will return the correct value if the element in the array with one element was target. In this case, with the first call to seqSearchRecHelper the value of data[0] would be target and 0 would be returned. Choice III will correctly return the index of the element closest to the end of the array with the value target, since data[last] == target will be true at some valid index value of last.
-
-![quiz5](https://user-images.githubusercontent.com/89221238/200909695-4a513396-c8ab-4fbe-954b-fad784fdbe86.png)
