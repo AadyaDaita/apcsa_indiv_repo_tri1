@@ -78,7 +78,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      9 min read
+      12 min read
     
 </span></p>
     
@@ -535,7 +535,7 @@ FIFO - First in first out.
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Hacks">Hacks<a class="anchor-link" href="#Hacks"> </a></h3>
+<h3 id="Basic-Components-of-a-Queue:-peek,-add,-remove">Basic Components of a Queue: peek, add, remove<a class="anchor-link" href="#Basic-Components-of-a-Queue:-peek,-add,-remove"> </a></h3>
 </div>
 </div>
 </div>
@@ -546,97 +546,7 @@ FIFO - First in first out.
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="c1">// 1</span>
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">QueueExample</span> <span class="p">{</span>
-    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">Queue</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">queue</span> <span class="o">=</span> <span class="k">new</span> <span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="p">();</span>
-
-        <span class="c1">// Adding elements to the queue</span>
-        <span class="n">queue</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;seven&quot;</span><span class="p">);</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Enqueued data: &quot;</span> <span class="o">+</span> <span class="s">&quot;seven&quot;</span><span class="p">);</span>
-        <span class="n">printQueue</span><span class="p">(</span><span class="n">queue</span><span class="p">);</span>
-
-        <span class="n">queue</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;slimy&quot;</span><span class="p">);</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Enqueued data: &quot;</span> <span class="o">+</span> <span class="s">&quot;slimy&quot;</span><span class="p">);</span>
-        <span class="n">printQueue</span><span class="p">(</span><span class="n">queue</span><span class="p">);</span>
-
-        <span class="n">queue</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;snakes&quot;</span><span class="p">);</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Enqueued data: &quot;</span> <span class="o">+</span> <span class="s">&quot;snakes&quot;</span><span class="p">);</span>
-        <span class="n">printQueue</span><span class="p">(</span><span class="n">queue</span><span class="p">);</span>
-
-        <span class="n">queue</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;sallying&quot;</span><span class="p">);</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Enqueued data: &quot;</span> <span class="o">+</span> <span class="s">&quot;sallying&quot;</span><span class="p">);</span>
-        <span class="n">printQueue</span><span class="p">(</span><span class="n">queue</span><span class="p">);</span>
-
-        <span class="n">queue</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;slowly&quot;</span><span class="p">);</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Enqueued data: &quot;</span> <span class="o">+</span> <span class="s">&quot;slowly&quot;</span><span class="p">);</span>
-        <span class="n">printQueue</span><span class="p">(</span><span class="n">queue</span><span class="p">);</span>
-
-        <span class="n">queue</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;slithered&quot;</span><span class="p">);</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Enqueued data: &quot;</span> <span class="o">+</span> <span class="s">&quot;slithered&quot;</span><span class="p">);</span>
-        <span class="n">printQueue</span><span class="p">(</span><span class="n">queue</span><span class="p">);</span>
-
-        <span class="n">queue</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;southward&quot;</span><span class="p">);</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Enqueued data: &quot;</span> <span class="o">+</span> <span class="s">&quot;southward&quot;</span><span class="p">);</span>
-        <span class="n">printQueue</span><span class="p">(</span><span class="n">queue</span><span class="p">);</span>
-
-        <span class="c1">// Removing elements from the queue</span>
-        <span class="n">String</span> <span class="n">data</span> <span class="o">=</span><span class="n">queue</span><span class="p">.</span><span class="na">remove</span><span class="p">();</span>
-
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Dequeued data: &quot;</span> <span class="o">+</span> <span class="n">data</span><span class="p">);</span>
-        <span class="n">printQueue</span><span class="p">(</span><span class="n">queue</span><span class="p">);</span>
-
-        <span class="n">data</span> <span class="o">=</span> <span class="n">queue</span><span class="p">.</span><span class="na">remove</span><span class="p">();</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Dequeued data: &quot;</span> <span class="o">+</span> <span class="n">data</span><span class="p">);</span>
-        <span class="n">printQueue</span><span class="p">(</span><span class="n">queue</span><span class="p">);</span>
-
-        <span class="n">data</span> <span class="o">=</span> <span class="n">queue</span><span class="p">.</span><span class="na">remove</span><span class="p">();</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Dequeued data: &quot;</span> <span class="o">+</span> <span class="n">data</span><span class="p">);</span>
-        <span class="n">printQueue</span><span class="p">(</span><span class="n">queue</span><span class="p">);</span>
-
-        <span class="n">data</span> <span class="o">=</span> <span class="n">queue</span><span class="p">.</span><span class="na">remove</span><span class="p">();</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Dequeued data: &quot;</span> <span class="o">+</span> <span class="n">data</span><span class="p">);</span>
-        <span class="n">printQueue</span><span class="p">(</span><span class="n">queue</span><span class="p">);</span>
-
-        <span class="n">data</span> <span class="o">=</span> <span class="n">queue</span><span class="p">.</span><span class="na">remove</span><span class="p">();</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Dequeued data: &quot;</span> <span class="o">+</span> <span class="n">data</span><span class="p">);</span>
-        <span class="n">printQueue</span><span class="p">(</span><span class="n">queue</span><span class="p">);</span>
-
-        <span class="n">data</span> <span class="o">=</span> <span class="n">queue</span><span class="p">.</span><span class="na">remove</span><span class="p">();</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Dequeued data: &quot;</span> <span class="o">+</span> <span class="n">data</span><span class="p">);</span>
-        <span class="n">printQueue</span><span class="p">(</span><span class="n">queue</span><span class="p">);</span>
-
-        <span class="n">data</span> <span class="o">=</span> <span class="n">queue</span><span class="p">.</span><span class="na">remove</span><span class="p">();</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Dequeued data: &quot;</span> <span class="o">+</span> <span class="n">data</span><span class="p">);</span>
-        <span class="n">printQueue</span><span class="p">(</span><span class="n">queue</span><span class="p">);</span>
-    <span class="p">}</span>
-
-    <span class="c1">// Helper method to print the contents of the queue</span>
-    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">printQueue</span><span class="p">(</span><span class="n">Queue</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">queue</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Words count: &quot;</span> <span class="o">+</span> <span class="n">queue</span><span class="p">.</span><span class="na">size</span><span class="p">()</span> <span class="o">+</span> <span class="s">&quot;, data: &quot;</span> <span class="o">+</span> <span class="n">String</span><span class="p">.</span><span class="na">join</span><span class="p">(</span><span class="s">&quot; &quot;</span><span class="p">,</span> <span class="n">queue</span><span class="p">));</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-
-<span class="n">QueueExample</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-    
-
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="c1">// implementation of 1 and 5</span>
-<span class="kd">public</span> <span class="kd">static</span> <span class="kd">class</span> <span class="nc">Queue</span><span class="p">{</span>
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">static</span> <span class="kd">class</span> <span class="nc">Queue</span><span class="p">{</span>
 
     <span class="kd">private</span> <span class="kd">static</span> <span class="kd">class</span> <span class="nc">Node</span><span class="p">{</span>
         <span class="kd">private</span> <span class="kt">int</span> <span class="n">data</span><span class="p">;</span>
@@ -689,6 +599,12 @@ FIFO - First in first out.
 </div>
     
 
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Merging-two-linked-lists,-different-method">Merging two linked lists, different method<a class="anchor-link" href="#Merging-two-linked-lists,-different-method"> </a></h3>
+</div>
+</div>
+</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -696,9 +612,7 @@ FIFO - First in first out.
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="c1">//2 </span>
-
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Merge</span><span class="p">{</span>
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Merge</span><span class="p">{</span>
     <span class="kd">public</span> <span class="n">ListNode</span> <span class="nf">mergeTwoLists</span><span class="p">(</span><span class="n">listNode</span> <span class="n">l1</span><span class="p">,</span> <span class="n">listNode</span> <span class="n">l2</span><span class="p">){</span>
         <span class="n">ListNode</span> <span class="n">temp_node</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ListNode</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
         <span class="n">ListNode</span> <span class="n">current_node</span> <span class="o">=</span> <span class="n">temp_node</span><span class="p">;</span>
@@ -736,6 +650,12 @@ FIFO - First in first out.
 </div>
     
 
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Randomizing-a-Queue">Randomizing a Queue<a class="anchor-link" href="#Randomizing-a-Queue"> </a></h3>
+</div>
+</div>
+</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -743,8 +663,7 @@ FIFO - First in first out.
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="c1">//3 </span>
-<span class="kd">public</span> <span class="kd">static</span> <span class="kd">class</span> <span class="nc">Queue</span><span class="p">{</span>
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">static</span> <span class="kd">class</span> <span class="nc">Queue</span><span class="p">{</span>
 
     <span class="kd">private</span> <span class="kd">static</span> <span class="kd">class</span> <span class="nc">Node</span><span class="p">{</span>
         <span class="kd">private</span> <span class="kt">int</span> <span class="n">data</span><span class="p">;</span>
@@ -768,6 +687,12 @@ FIFO - First in first out.
 </div>
     
 
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Reversing-a-stack-using-queue-and-stack,-different-method.">Reversing a stack using queue and stack, different method.<a class="anchor-link" href="#Reversing-a-stack-using-queue-and-stack,-different-method."> </a></h3>
+</div>
+</div>
+</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -775,9 +700,7 @@ FIFO - First in first out.
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="c1">//4</span>
-
-<span class="cm">/*</span>
+<div class=" highlight hl-java"><pre><span></span><span class="cm">/*</span>
 <span class="cm"> * Since Queues are Lifos and Stacks are Fifos, if we take the first element from a queue, and add to a stack, the order of the elements in the original queue will be reveresed. </span>
 <span class="cm"> */</span>
 
@@ -877,6 +800,336 @@ FIFO - First in first out.
 160 161 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179 
 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197 198 199 
 </pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="HACKS:">HACKS:<a class="anchor-link" href="#HACKS:"> </a></h2>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="c1">// Hack 1</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">QueueExample</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">Queue</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">queue</span> <span class="o">=</span> <span class="k">new</span> <span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="p">();</span>
+
+        <span class="c1">// Adding elements to the queue</span>
+        <span class="n">queue</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;seven&quot;</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Enqueued data: &quot;</span> <span class="o">+</span> <span class="s">&quot;seven&quot;</span><span class="p">);</span>
+        <span class="n">printQueue</span><span class="p">(</span><span class="n">queue</span><span class="p">);</span>
+
+        <span class="n">queue</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;slimy&quot;</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Enqueued data: &quot;</span> <span class="o">+</span> <span class="s">&quot;slimy&quot;</span><span class="p">);</span>
+        <span class="n">printQueue</span><span class="p">(</span><span class="n">queue</span><span class="p">);</span>
+
+        <span class="n">queue</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;snakes&quot;</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Enqueued data: &quot;</span> <span class="o">+</span> <span class="s">&quot;snakes&quot;</span><span class="p">);</span>
+        <span class="n">printQueue</span><span class="p">(</span><span class="n">queue</span><span class="p">);</span>
+
+        <span class="n">queue</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;sallying&quot;</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Enqueued data: &quot;</span> <span class="o">+</span> <span class="s">&quot;sallying&quot;</span><span class="p">);</span>
+        <span class="n">printQueue</span><span class="p">(</span><span class="n">queue</span><span class="p">);</span>
+
+        <span class="n">queue</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;slowly&quot;</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Enqueued data: &quot;</span> <span class="o">+</span> <span class="s">&quot;slowly&quot;</span><span class="p">);</span>
+        <span class="n">printQueue</span><span class="p">(</span><span class="n">queue</span><span class="p">);</span>
+
+        <span class="n">queue</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;slithered&quot;</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Enqueued data: &quot;</span> <span class="o">+</span> <span class="s">&quot;slithered&quot;</span><span class="p">);</span>
+        <span class="n">printQueue</span><span class="p">(</span><span class="n">queue</span><span class="p">);</span>
+
+        <span class="n">queue</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;southward&quot;</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Enqueued data: &quot;</span> <span class="o">+</span> <span class="s">&quot;southward&quot;</span><span class="p">);</span>
+        <span class="n">printQueue</span><span class="p">(</span><span class="n">queue</span><span class="p">);</span>
+
+        <span class="c1">// Removing elements from the queue</span>
+        <span class="n">String</span> <span class="n">data</span> <span class="o">=</span><span class="n">queue</span><span class="p">.</span><span class="na">remove</span><span class="p">();</span>
+
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Dequeued data: &quot;</span> <span class="o">+</span> <span class="n">data</span><span class="p">);</span>
+        <span class="n">printQueue</span><span class="p">(</span><span class="n">queue</span><span class="p">);</span>
+
+        <span class="n">data</span> <span class="o">=</span> <span class="n">queue</span><span class="p">.</span><span class="na">remove</span><span class="p">();</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Dequeued data: &quot;</span> <span class="o">+</span> <span class="n">data</span><span class="p">);</span>
+        <span class="n">printQueue</span><span class="p">(</span><span class="n">queue</span><span class="p">);</span>
+
+        <span class="n">data</span> <span class="o">=</span> <span class="n">queue</span><span class="p">.</span><span class="na">remove</span><span class="p">();</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Dequeued data: &quot;</span> <span class="o">+</span> <span class="n">data</span><span class="p">);</span>
+        <span class="n">printQueue</span><span class="p">(</span><span class="n">queue</span><span class="p">);</span>
+
+        <span class="n">data</span> <span class="o">=</span> <span class="n">queue</span><span class="p">.</span><span class="na">remove</span><span class="p">();</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Dequeued data: &quot;</span> <span class="o">+</span> <span class="n">data</span><span class="p">);</span>
+        <span class="n">printQueue</span><span class="p">(</span><span class="n">queue</span><span class="p">);</span>
+
+        <span class="n">data</span> <span class="o">=</span> <span class="n">queue</span><span class="p">.</span><span class="na">remove</span><span class="p">();</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Dequeued data: &quot;</span> <span class="o">+</span> <span class="n">data</span><span class="p">);</span>
+        <span class="n">printQueue</span><span class="p">(</span><span class="n">queue</span><span class="p">);</span>
+
+        <span class="n">data</span> <span class="o">=</span> <span class="n">queue</span><span class="p">.</span><span class="na">remove</span><span class="p">();</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Dequeued data: &quot;</span> <span class="o">+</span> <span class="n">data</span><span class="p">);</span>
+        <span class="n">printQueue</span><span class="p">(</span><span class="n">queue</span><span class="p">);</span>
+
+        <span class="n">data</span> <span class="o">=</span> <span class="n">queue</span><span class="p">.</span><span class="na">remove</span><span class="p">();</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Dequeued data: &quot;</span> <span class="o">+</span> <span class="n">data</span><span class="p">);</span>
+        <span class="n">printQueue</span><span class="p">(</span><span class="n">queue</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="c1">// Helper method to print the contents of the queue</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">printQueue</span><span class="p">(</span><span class="n">Queue</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">queue</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Words count: &quot;</span> <span class="o">+</span> <span class="n">queue</span><span class="p">.</span><span class="na">size</span><span class="p">()</span> <span class="o">+</span> <span class="s">&quot;, data: &quot;</span> <span class="o">+</span> <span class="n">String</span><span class="p">.</span><span class="na">join</span><span class="p">(</span><span class="s">&quot; &quot;</span><span class="p">,</span> <span class="n">queue</span><span class="p">));</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="n">QueueExample</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="c1">//Hack 2 - merge 2 queues</span>
+<span class="n">Queue</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">questionNums1</span> <span class="o">=</span> <span class="k">new</span> <span class="n">LinkedList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<span class="c1">//offer adds an element to the end of the queue and </span>
+<span class="c1">//returns a boolean value indicating whether the operation was successful</span>
+<span class="n">questionNums1</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="n">questionNums1</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="mi">4</span><span class="p">);</span>
+<span class="n">questionNums1</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
+<span class="n">questionNums1</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="mi">8</span><span class="p">);</span>
+
+<span class="n">Queue</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">questionNums2</span> <span class="o">=</span> <span class="k">new</span> <span class="n">LinkedList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<span class="n">questionNums2</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+<span class="n">questionNums2</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
+<span class="n">questionNums2</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="mi">6</span><span class="p">);</span>
+<span class="n">questionNums2</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="mi">7</span><span class="p">);</span>
+
+<span class="n">Queue</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">mergedQueue</span> <span class="o">=</span> <span class="k">new</span> <span class="n">LinkedList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+
+<span class="k">while</span> <span class="p">(</span><span class="o">!</span><span class="n">questionNums1</span><span class="p">.</span><span class="na">isEmpty</span><span class="p">()</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="n">questionNums2</span><span class="p">.</span><span class="na">isEmpty</span><span class="p">())</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">questionNums1</span><span class="p">.</span><span class="na">peek</span><span class="p">()</span> <span class="o">&lt;</span> <span class="n">questionNums2</span><span class="p">.</span><span class="na">peek</span><span class="p">())</span> <span class="p">{</span> <span class="c1">//Retrieve the first element from each queue using the peek() method</span>
+        <span class="c1">//peek method returns the element at the front of the queue without removing it</span>
+        <span class="n">mergedQueue</span><span class="p">.</span><span class="na">offer</span><span class="p">(</span><span class="n">questionNums1</span><span class="p">.</span><span class="na">poll</span><span class="p">());</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span> <span class="c1">//Compare the two elements </span>
+        <span class="c1">//enqueue the smaller one to the new queue using the offer() method.</span>
+        <span class="n">mergedQueue</span><span class="p">.</span><span class="na">offer</span><span class="p">(</span><span class="n">questionNums2</span><span class="p">.</span><span class="na">poll</span><span class="p">());</span>
+    <span class="p">}</span><span class="c1">//repeat</span>
+<span class="p">}</span>
+
+<span class="n">mergedQueue</span><span class="p">.</span><span class="na">addAll</span><span class="p">(</span><span class="n">questionNums1</span><span class="p">);</span>
+<span class="n">mergedQueue</span><span class="p">.</span><span class="na">addAll</span><span class="p">(</span><span class="n">questionNums2</span><span class="p">);</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Python Question # Order: &quot;</span> <span class="o">+</span> <span class="n">mergedQueue</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Python Question # Order: [1, 2, 3, 4, 5, 6, 7, 8]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kn">import</span> <span class="nn">java.util.Queue</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">java.util.LinkedList</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">java.util.Random</span><span class="p">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">ShuffleQueue</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">shuffle</span><span class="p">(</span><span class="n">Queue</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">queue</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">Random</span> <span class="n">rand</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Random</span><span class="p">();</span>
+<span class="c1">//static shuffle method that takes a Queue of strings as its argument and shuffles the elements</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">queue</span><span class="p">.</span><span class="na">size</span><span class="p">();</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+            <span class="kt">int</span> <span class="n">randomIndex</span> <span class="o">=</span> <span class="n">rand</span><span class="p">.</span><span class="na">nextInt</span><span class="p">(</span><span class="n">queue</span><span class="p">.</span><span class="na">size</span><span class="p">());</span>
+            <span class="n">String</span> <span class="n">temp</span> <span class="o">=</span> <span class="n">queue</span><span class="p">.</span><span class="na">peek</span><span class="p">();</span>
+            <span class="c1">//view or peek at the element at the front of the queue without removing it</span>
+            <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">randomIndex</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">queue</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">queue</span><span class="p">.</span><span class="na">remove</span><span class="p">());</span>
+            <span class="p">}</span><span class="c1">//iterating through the queue and swapping</span>
+            <span class="c1">// each element with another element at a random position in the queue.</span>
+            <span class="n">queue</span><span class="p">.</span><span class="na">remove</span><span class="p">();</span>
+            <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">randomIndex</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">queue</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">queue</span><span class="p">.</span><span class="na">remove</span><span class="p">());</span>
+            <span class="p">}</span>
+            <span class="n">queue</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">temp</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="c1">//Random object to generate random indices within the size of the queue</span>
+    <span class="c1">//combination of remove and add methods to move elements around in the queue</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">Queue</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">queue</span> <span class="o">=</span> <span class="k">new</span> <span class="n">LinkedList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+        <span class="n">queue</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Python&quot;</span><span class="p">);</span>
+        <span class="n">queue</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;JavaScript&quot;</span><span class="p">);</span>
+        <span class="n">queue</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;C#&quot;</span><span class="p">);</span>
+        <span class="n">queue</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Java&quot;</span><span class="p">);</span>
+
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Original queue: &quot;</span> <span class="o">+</span> <span class="n">queue</span><span class="p">);</span>
+
+        <span class="n">shuffle</span><span class="p">(</span><span class="n">queue</span><span class="p">);</span>
+
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Shuffled queue: &quot;</span> <span class="o">+</span> <span class="n">queue</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="n">ShuffleQueue</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Original queue: [Python, JavaScript, C#, Java]
+Shuffled queue: [JavaScript, JavaScript, Java, Python]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="c1">//Hack 4</span>
+<span class="n">Queue</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">queue</span> <span class="o">=</span> <span class="k">new</span> <span class="n">LinkedList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<span class="c1">//Create a new empty stack to store the elements of the queue</span>
+<span class="n">queue</span><span class="p">.</span><span class="na">offer</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="n">queue</span><span class="p">.</span><span class="na">offer</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+<span class="n">queue</span><span class="p">.</span><span class="na">offer</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
+<span class="n">queue</span><span class="p">.</span><span class="na">offer</span><span class="p">(</span><span class="mi">4</span><span class="p">);</span>
+<span class="n">queue</span><span class="p">.</span><span class="na">offer</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
+
+<span class="n">Stack</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">stack</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Stack</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<span class="k">while</span> <span class="p">(</span><span class="o">!</span><span class="n">queue</span><span class="p">.</span><span class="na">isEmpty</span><span class="p">())</span> <span class="p">{</span>
+    <span class="n">stack</span><span class="p">.</span><span class="na">push</span><span class="p">(</span><span class="n">queue</span><span class="p">.</span><span class="na">poll</span><span class="p">());</span>
+<span class="p">}</span>
+<span class="c1">//Dequeue all elements from the original queue and push them onto the stack</span>
+<span class="n">Queue</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">reversedQueue</span> <span class="o">=</span> <span class="k">new</span> <span class="n">LinkedList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<span class="k">while</span> <span class="p">(</span><span class="o">!</span><span class="n">stack</span><span class="p">.</span><span class="na">isEmpty</span><span class="p">())</span> <span class="p">{</span>
+    <span class="n">reversedQueue</span><span class="p">.</span><span class="na">offer</span><span class="p">(</span><span class="n">stack</span><span class="p">.</span><span class="na">pop</span><span class="p">());</span>
+<span class="p">}</span><span class="c1">//Create a new empty queue to store the reversed elements</span>
+<span class="c1">// pop removes and returns the top element of the stack</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Original Question Numbers: &quot;</span> <span class="o">+</span> <span class="n">queue</span><span class="p">);</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Reversed Question Numbers: &quot;</span> <span class="o">+</span> <span class="n">reversedQueue</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Original Question Numbers: []
+Reversed Question Numbers: [5, 4, 3, 2, 1]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kn">import</span> <span class="nn">java.util.Queue</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">java.util.Stack</span><span class="p">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Languages</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">reverse</span><span class="p">(</span><span class="n">Queue</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">queue</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">Stack</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">stack</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Stack</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<span class="c1">//The reverse method creates a new Stack object, </span>
+<span class="c1">//then iterates through the elements in the queue, removing them one by one and pushing them onto the stack</span>
+        <span class="k">while</span> <span class="p">(</span><span class="o">!</span><span class="n">queue</span><span class="p">.</span><span class="na">isEmpty</span><span class="p">())</span> <span class="p">{</span>
+            <span class="n">stack</span><span class="p">.</span><span class="na">push</span><span class="p">(</span><span class="n">queue</span><span class="p">.</span><span class="na">remove</span><span class="p">());</span>
+        <span class="p">}</span>
+
+        <span class="k">while</span> <span class="p">(</span><span class="o">!</span><span class="n">stack</span><span class="p">.</span><span class="na">isEmpty</span><span class="p">())</span> <span class="p">{</span>
+            <span class="n">queue</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">stack</span><span class="p">.</span><span class="na">pop</span><span class="p">());</span> <span class="c1">//the method iterates </span>
+            <span class="c1">//through the elements in the stack, popping them off one by one and adding them back to the queue</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Reversed queue of languages: &quot;</span><span class="o">+</span> <span class="n">queue</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Reversed queue of languages: [Java, C#, JavaScript, Python], </pre>
 </div>
 </div>
 
