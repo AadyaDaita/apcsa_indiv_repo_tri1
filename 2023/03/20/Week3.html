@@ -897,10 +897,35 @@ Total Seconds: 0.016228949
             <span class="n">list</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="n">value</span><span class="p">;</span>
         <span class="p">}</span>
 
+
+        <span class="kd">public</span> <span class="kd">static</span> <span class="kt">long</span> <span class="nf">BinarySearch</span><span class="p">(</span><span class="kt">int</span><span class="o">[]</span> <span class="n">list</span><span class="p">,</span> <span class="n">Integer</span> <span class="n">value</span><span class="p">)</span> <span class="p">{</span>
+            <span class="kt">long</span> <span class="n">start</span> <span class="o">=</span> <span class="n">System</span><span class="p">.</span><span class="na">nanoTime</span><span class="p">();</span>
+            <span class="cm">/*</span>
+<span class="cm">            *  Binary Search is repeatedly dividing in half the portion of the list that could contain the item, </span>
+<span class="cm">            *  until you&#39;ve narrowed down the possible locations to just one.</span>
+<span class="cm">            */</span>
+
+            <span class="kt">int</span> <span class="n">low</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+            <span class="kt">int</span> <span class="n">high</span> <span class="o">=</span> <span class="n">list</span><span class="p">.</span><span class="na">length</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span>
+            <span class="kt">int</span> <span class="n">middle</span> <span class="o">=</span> <span class="p">(</span><span class="n">low</span> <span class="o">+</span> <span class="n">high</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>
+            <span class="k">while</span> <span class="p">(</span><span class="n">low</span> <span class="o">&lt;=</span> <span class="n">high</span><span class="p">)</span> <span class="p">{</span>
+                <span class="k">if</span> <span class="p">(</span><span class="n">list</span><span class="o">[</span><span class="n">middle</span><span class="o">]</span> <span class="o">&lt;</span> <span class="n">value</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="n">low</span> <span class="o">=</span> <span class="n">middle</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+                <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">list</span><span class="o">[</span><span class="n">middle</span><span class="o">]</span> <span class="o">==</span> <span class="n">value</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="n">brseak</span><span class="p">;</span>
+                <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+                    <span class="n">high</span> <span class="o">=</span> <span class="n">middle</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span>
+                <span class="p">}</span>
+                <span class="n">middle</span> <span class="o">=</span> <span class="p">(</span><span class="n">low</span> <span class="o">+</span> <span class="n">high</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>
+            <span class="p">}</span>
+            <span class="kt">long</span> <span class="n">end</span> <span class="o">=</span> <span class="n">System</span><span class="p">.</span><span class="na">nanoTime</span><span class="p">();</span>
+            <span class="k">return</span> <span class="p">(</span><span class="n">end</span> <span class="o">-</span> <span class="n">start</span><span class="p">);</span>
+        <span class="p">}</span>
+
         <span class="kt">long</span> <span class="n">lookUpTime</span> <span class="o">=</span> <span class="p">(</span><span class="n">lookUp</span><span class="p">(</span><span class="n">hashmap</span><span class="p">,</span> <span class="mi">12</span><span class="p">));</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Look up time: &quot;</span> <span class="o">+</span> <span class="n">lookUpTime</span> <span class="o">+</span> <span class="s">&quot; nanoseconds&quot;</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Look-up time: &quot;</span> <span class="o">+</span> <span class="n">lookUpTime</span> <span class="o">+</span> <span class="s">&quot; nanoseconds&quot;</span><span class="p">);</span>
         <span class="kt">long</span> <span class="n">binarySearchTime</span> <span class="o">=</span> <span class="p">(</span><span class="n">binarySearchTime</span><span class="p">(</span><span class="n">list</span><span class="p">,</span> <span class="mi">12</span><span class="p">));</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Binary search time: &quot;</span> <span class="o">+</span> <span class="n">binarySearchTime</span> <span class="o">+</span> <span class="s">&quot; nanoseconds&quot;</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Binary Search time: &quot;</span> <span class="o">+</span> <span class="n">binarySearchTime</span> <span class="o">+</span> <span class="s">&quot; nanoseconds&quot;</span><span class="p">);</span>
         
     <span class="p">}</span>
 
@@ -911,25 +936,7 @@ Total Seconds: 0.016228949
         <span class="k">return</span> <span class="p">(</span><span class="n">end</span> <span class="o">-</span> <span class="n">start</span><span class="p">);</span>
     <span class="p">}</span>
 
-    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">long</span> <span class="nf">binarySearchTime</span><span class="p">(</span><span class="kt">int</span><span class="o">[]</span> <span class="n">list</span><span class="p">,</span> <span class="n">Integer</span> <span class="n">value</span><span class="p">)</span> <span class="p">{</span>
-        <span class="kt">long</span> <span class="n">start</span> <span class="o">=</span> <span class="n">System</span><span class="p">.</span><span class="na">nanoTime</span><span class="p">();</span>
-        <span class="c1">// binary search </span>
-        <span class="kt">int</span> <span class="n">low</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-        <span class="kt">int</span> <span class="n">high</span> <span class="o">=</span> <span class="n">list</span><span class="p">.</span><span class="na">length</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span>
-        <span class="kt">int</span> <span class="n">middle</span> <span class="o">=</span> <span class="p">(</span><span class="n">low</span> <span class="o">+</span> <span class="n">high</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>
-        <span class="k">while</span> <span class="p">(</span><span class="n">low</span> <span class="o">&lt;=</span> <span class="n">high</span><span class="p">)</span> <span class="p">{</span>
-            <span class="k">if</span> <span class="p">(</span><span class="n">list</span><span class="o">[</span><span class="n">middle</span><span class="o">]</span> <span class="o">&lt;</span> <span class="n">value</span><span class="p">)</span> <span class="p">{</span>
-                <span class="n">low</span> <span class="o">=</span> <span class="n">middle</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
-            <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">list</span><span class="o">[</span><span class="n">middle</span><span class="o">]</span> <span class="o">==</span> <span class="n">value</span><span class="p">)</span> <span class="p">{</span>
-                <span class="k">break</span><span class="p">;</span>
-            <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-                <span class="n">high</span> <span class="o">=</span> <span class="n">middle</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span>
-            <span class="p">}</span>
-            <span class="n">middle</span> <span class="o">=</span> <span class="p">(</span><span class="n">low</span> <span class="o">+</span> <span class="n">high</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>
-        <span class="p">}</span>
-        <span class="kt">long</span> <span class="n">end</span> <span class="o">=</span> <span class="n">System</span><span class="p">.</span><span class="na">nanoTime</span><span class="p">();</span>
-        <span class="k">return</span> <span class="p">(</span><span class="n">end</span> <span class="o">-</span> <span class="n">start</span><span class="p">);</span>
-    <span class="p">}</span>
+
 <span class="p">}</span>
 <span class="n">Hash</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
 </pre></div>
@@ -944,8 +951,8 @@ Total Seconds: 0.016228949
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Look up time: 4948 nanoseconds
-Binary search time: 3192 nanoseconds
+<pre>Look-up time: 1672 nanoseconds
+Binary Search time: 2913 nanoseconds
 </pre>
 </div>
 </div>
