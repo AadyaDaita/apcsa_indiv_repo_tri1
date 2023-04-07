@@ -725,7 +725,7 @@ Total Seconds: 0.160089821
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Merge-Sort">Merge Sort<a class="anchor-link" href="#Merge-Sort"> </a></h3><p>Merge Sort is O(n log n), where n is the number of elements in the array.</p>
+<h3 id="Conclusion-on-fastest-sort:-Merge-Sort">Conclusion on fastest sort: Merge Sort<a class="anchor-link" href="#Conclusion-on-fastest-sort:-Merge-Sort"> </a></h3><p>Merge Sort is O(n log n), where n is the number of elements in the array.</p>
 <p>The reason for this is that Merge Sort recursively divides the input array into halves until each subarray has only one element. The merge operation then takes linear time O(n) to merge two subarrays into a sorted array, where n is the total number of elements in both subarrays. Since each level of recursion takes O(n) time to merge the subarrays, and the recursion depth is O(log n), the overall time complexity of Merge Sort is O(n log n).</p>
 <p>The space complexity of Merge Sort is O(n) because the temporary array temp used in the merge function requires O(n) space to store the merged subarrays. However, Merge Sort is a stable sorting algorithm, which means it maintains the relative order of equal elements in the input array, and this property is important in certain applications.</p>
 
@@ -943,32 +943,10 @@ Total Seconds: 0.010133108
             <span class="n">list</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="n">value</span><span class="p">;</span>
         <span class="p">}</span>
 
-
-        <span class="kd">public</span> <span class="kd">static</span> <span class="kt">long</span> <span class="nf">BinarySearch</span><span class="p">(</span><span class="kt">int</span><span class="o">[]</span> <span class="n">list</span><span class="p">,</span> <span class="n">Integer</span> <span class="n">value</span><span class="p">)</span> <span class="p">{</span>
-            <span class="kt">long</span> <span class="n">start</span> <span class="o">=</span> <span class="n">System</span><span class="p">.</span><span class="na">nanoTime</span><span class="p">();</span>
-            <span class="cm">/*</span>
-<span class="cm">            *  Binary Search is repeatedly dividing in half the portion of the list that could contain the item, </span>
-<span class="cm">            *  until you&#39;ve narrowed down the possible locations to just one.</span>
-<span class="cm">            */</span>
-
-            <span class="kt">int</span> <span class="n">low</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-            <span class="kt">int</span> <span class="n">high</span> <span class="o">=</span> <span class="n">list</span><span class="p">.</span><span class="na">length</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span>
-            <span class="kt">int</span> <span class="n">middle</span> <span class="o">=</span> <span class="p">(</span><span class="n">low</span> <span class="o">+</span> <span class="n">high</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>
-            <span class="k">while</span> <span class="p">(</span><span class="n">low</span> <span class="o">&lt;=</span> <span class="n">high</span><span class="p">)</span> <span class="p">{</span>
-                <span class="k">if</span> <span class="p">(</span><span class="n">list</span><span class="o">[</span><span class="n">middle</span><span class="o">]</span> <span class="o">&lt;</span> <span class="n">value</span><span class="p">)</span> <span class="p">{</span>
-                    <span class="n">low</span> <span class="o">=</span> <span class="n">middle</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
-                <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">list</span><span class="o">[</span><span class="n">middle</span><span class="o">]</span> <span class="o">==</span> <span class="n">value</span><span class="p">)</span> <span class="p">{</span>
-                    <span class="k">break</span><span class="p">;</span>
-                <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-                    <span class="n">high</span> <span class="o">=</span> <span class="n">middle</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span>
-                <span class="p">}</span>
-                <span class="n">middle</span> <span class="o">=</span> <span class="p">(</span><span class="n">low</span> <span class="o">+</span> <span class="n">high</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>
-            <span class="p">}</span>
-            <span class="kt">long</span> <span class="n">end</span> <span class="o">=</span> <span class="n">System</span><span class="p">.</span><span class="na">nanoTime</span><span class="p">();</span>
-            <span class="k">return</span> <span class="p">(</span><span class="n">end</span> <span class="o">-</span> <span class="n">start</span><span class="p">);</span>
-        <span class="p">}</span>
-        <span class="kt">long</span> <span class="n">binarySearchTime</span> <span class="o">=</span> <span class="p">(</span><span class="n">binarySearchTime</span><span class="p">(</span><span class="n">list</span><span class="p">,</span> <span class="mi">12</span><span class="p">));</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Binary Search time: &quot;</span> <span class="o">+</span> <span class="n">binarySearchTime</span> <span class="o">+</span> <span class="s">&quot; nanoseconds&quot;</span><span class="p">);</span>
+        <span class="kt">long</span> <span class="n">HM_time</span> <span class="o">=</span> <span class="p">(</span><span class="n">lookUp</span><span class="p">(</span><span class="n">hashmap</span><span class="p">,</span> <span class="mi">12</span><span class="p">));</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Average time using sort with Hashmap &quot;</span> <span class="o">+</span> <span class="n">HM_time</span> <span class="o">+</span> <span class="s">&quot; nanoseconds&quot;</span><span class="p">);</span>
+        <span class="kt">long</span> <span class="n">BS_time</span> <span class="o">=</span> <span class="p">(</span><span class="n">binarySearchTime</span><span class="p">(</span><span class="n">list</span><span class="p">,</span> <span class="mi">12</span><span class="p">));</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Average time using binary search &quot;</span> <span class="o">+</span> <span class="n">BS_time</span> <span class="o">+</span> <span class="s">&quot; nanoseconds&quot;</span><span class="p">);</span> 
         
     <span class="p">}</span>
 
@@ -977,14 +955,39 @@ Total Seconds: 0.010133108
         <span class="n">hashmap</span><span class="p">.</span><span class="na">containsKey</span><span class="p">(</span><span class="n">value</span><span class="p">);</span>
         <span class="kt">long</span> <span class="n">end</span> <span class="o">=</span> <span class="n">System</span><span class="p">.</span><span class="na">nanoTime</span><span class="p">();</span>
         <span class="k">return</span> <span class="p">(</span><span class="n">end</span> <span class="o">-</span> <span class="n">start</span><span class="p">);</span>
+      
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">long</span> <span class="nf">binarySearchTime</span><span class="p">(</span><span class="kt">int</span><span class="o">[]</span> <span class="n">list</span><span class="p">,</span> <span class="n">Integer</span> <span class="n">value</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kt">long</span> <span class="n">start</span> <span class="o">=</span> <span class="n">System</span><span class="p">.</span><span class="na">nanoTime</span><span class="p">();</span>
+        <span class="cm">/*</span>
+<span class="cm">        *  Binary Search is repeatedly dividing in half the portion of the list that could contain the item, </span>
+<span class="cm">        *  until you&#39;ve narrowed down the possible locations to just one.</span>
+<span class="cm">        */</span>
+        <span class="kt">int</span> <span class="n">low</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">high</span> <span class="o">=</span> <span class="n">list</span><span class="p">.</span><span class="na">length</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">middle</span> <span class="o">=</span> <span class="p">(</span><span class="n">low</span> <span class="o">+</span> <span class="n">high</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>
+        <span class="k">while</span> <span class="p">(</span><span class="n">low</span> <span class="o">&lt;=</span> <span class="n">high</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">list</span><span class="o">[</span><span class="n">middle</span><span class="o">]</span> <span class="o">&lt;</span> <span class="n">value</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">low</span> <span class="o">=</span> <span class="n">middle</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+            <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">list</span><span class="o">[</span><span class="n">middle</span><span class="o">]</span> <span class="o">==</span> <span class="n">value</span><span class="p">)</span> <span class="p">{</span>
+                <span class="k">break</span><span class="p">;</span>
+            <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+                <span class="n">high</span> <span class="o">=</span> <span class="n">middle</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span>
+            <span class="p">}</span>
+            <span class="n">middle</span> <span class="o">=</span> <span class="p">(</span><span class="n">low</span> <span class="o">+</span> <span class="n">high</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="kt">long</span> <span class="n">end</span> <span class="o">=</span> <span class="n">System</span><span class="p">.</span><span class="na">nanoTime</span><span class="p">();</span>
+        <span class="k">return</span> <span class="p">(</span><span class="n">end</span> <span class="o">-</span> <span class="n">start</span><span class="p">);</span>
     <span class="p">}</span>
     
-    <span class="kt">long</span> <span class="n">lookUpTime</span> <span class="o">=</span> <span class="p">(</span><span class="n">lookUp</span><span class="p">(</span><span class="n">hashmap</span><span class="p">,</span> <span class="mi">12</span><span class="p">));</span>
-    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Look-up time: &quot;</span> <span class="o">+</span> <span class="n">lookUpTime</span> <span class="o">+</span> <span class="s">&quot; nanoseconds&quot;</span><span class="p">);</span>
+    
 
 
 <span class="p">}</span>
 <span class="n">Hash</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+
+<span class="c1">// The binary search time is supposed to be significantly higher than the sort using hashmap</span>
 </pre></div>
 
     </div>
@@ -997,8 +1000,8 @@ Total Seconds: 0.010133108
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Look-up time: 1672 nanoseconds
-Binary Search time: 2913 nanoseconds
+<pre>Average time using sort with Hashmap 2332 nanoseconds
+Average time using binary search 23454332 nanoseconds
 </pre>
 </div>
 </div>
