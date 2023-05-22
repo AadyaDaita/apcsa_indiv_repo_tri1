@@ -4,9 +4,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Title | Aadya’s CSA Fastpage</title>
+<title>Putting all the 10X and 4X files together | Aadya’s CSA Fastpage</title>
 <meta name="generator" content="Jekyll v4.1.1" />
-<meta property="og:title" content="Title" />
+<meta property="og:title" content="Putting all the 10X and 4X files together" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Hey this is Aadya’s fastpage" />
 <meta property="og:description" content="Hey this is Aadya’s fastpage" />
@@ -16,9 +16,9 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2023-05-15T00:00:00-05:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Title" />
+<meta property="twitter:title" content="Putting all the 10X and 4X files together" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-05-15T00:00:00-05:00","datePublished":"2023-05-15T00:00:00-05:00","description":"Hey this is Aadya’s fastpage","headline":"Title","mainEntityOfPage":{"@type":"WebPage","@id":"https://aadyadaita.github.io/apcsa_indiv_repo_tri1/2023/05/15/booleanLab.html"},"url":"https://aadyadaita.github.io/apcsa_indiv_repo_tri1/2023/05/15/booleanLab.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-05-15T00:00:00-05:00","datePublished":"2023-05-15T00:00:00-05:00","description":"Hey this is Aadya’s fastpage","headline":"Putting all the 10X and 4X files together","mainEntityOfPage":{"@type":"WebPage","@id":"https://aadyadaita.github.io/apcsa_indiv_repo_tri1/2023/05/15/booleanLab.html"},"url":"https://aadyadaita.github.io/apcsa_indiv_repo_tri1/2023/05/15/booleanLab.html"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/apcsa_indiv_repo_tri1/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://aadyadaita.github.io/apcsa_indiv_repo_tri1/feed.xml" title="Aadya's CSA Fastpage" /><link rel="shortcut icon" type="image/x-icon" href="/apcsa_indiv_repo_tri1/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -72,13 +72,13 @@ window.onload = wrap_img;
       <div class="wrapper">
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">Title</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2023-05-15T00:00:00-05:00" itemprop="datePublished">
+    <h1 class="post-title p-name" itemprop="name headline">Putting all the 10X and 4X files together</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2023-05-15T00:00:00-05:00" itemprop="datePublished">
         2023-05-15 00:00:00 -0500
       </time>
        • <span class="read-time" title="Estimated read time">
     
     
-      2 min read
+      1 min read
     
 </span></p>
     
@@ -129,81 +129,69 @@ window.onload = wrap_img;
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
-<span class="c1"># assign directory</span>
+<span class="kn">import</span> <span class="nn">shutil</span>
+<span class="kn">import</span> <span class="nn">pandas</span>
+
+
 <span class="n">directory</span> <span class="o">=</span> <span class="s1">&#39;Inflamed&#39;</span>
- 
-<span class="c1"># iterate over files in</span>
-<span class="c1"># that directory</span>
 <span class="k">for</span> <span class="n">filename</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">directory</span><span class="p">):</span>
+
     <span class="n">f</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">directory</span><span class="p">,</span> <span class="n">filename</span><span class="p">)</span>
     <span class="c1"># checking if it is a file</span>
-    <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">f</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">f</span><span class="p">)</span> <span class="o">&gt;</span><span class="mi">30</span><span class="p">:</span>
+        <span class="n">new_folder</span> <span class="o">=</span> <span class="n">f</span><span class="p">[</span><span class="mi">10</span><span class="p">:</span><span class="mi">29</span><span class="p">]</span>
+        <span class="n">new_dir</span> <span class="o">=</span> <span class="n">directory</span> <span class="o">+</span> <span class="s2">&quot;/../&quot;</span> <span class="o">+</span> <span class="n">new_folder</span>
+        <span class="n">isExist</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">new_dir</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">isExist</span><span class="p">:</span>
+            <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">new_dir</span><span class="p">)</span>
+
+        <span class="k">for</span> <span class="n">cur_file</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">directory</span><span class="p">):</span>
+            <span class="n">fut</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">directory</span><span class="p">,</span> <span class="n">cur_file</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isdir</span><span class="p">(</span><span class="n">fut</span><span class="p">):</span>
+                <span class="k">continue</span>
+            <span class="n">fut_name</span> <span class="o">=</span> <span class="n">fut</span><span class="p">[</span><span class="mi">10</span><span class="p">:</span><span class="mi">29</span><span class="p">]</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">fut_name</span> <span class="o">==</span> <span class="n">new_folder</span><span class="p">):</span>
+                <span class="n">shutil</span><span class="o">.</span><span class="n">move</span><span class="p">(</span><span class="n">fut</span><span class="p">,</span> <span class="n">new_dir</span><span class="p">)</span>
 </pre></div>
 
     </div>
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
+</div>
+    
 
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Inflamed\CD 11 ILEUM.png
-Inflamed\CD11 IL-I-QS_2493 10x 190603.png
-Inflamed\CD11 IL-I-QS_2494 10x 190603.png
-Inflamed\CD11 IL-I-QS_2495 10x 190603.png
-Inflamed\CD11 IL-I-QS_2496 20x 190603.png
-Inflamed\CD11 IL-I-QS_2497 20x 190603.png
-Inflamed\CD11 IL-I-QS_2498 20x 190603.png
-Inflamed\CD11 IL-I-QS_2499 20x 190603.png
-Inflamed\CD11 IL-I-QS_2500 40x 190603.png
-Inflamed\CD11 IL-I-QS_2501 40x 190603.png
-Inflamed\CD11 IL-I-QS_2502 40x 190603.png
-Inflamed\CD11 IL-I-QS_2503 40x 190603.png
-Inflamed\CD11 IL-I-QS_2504 40x 190603.png
-Inflamed\CD11 ILEUM I .png
-Inflamed\CD11 ILEUM Inf 2.png
-Inflamed\CD11 ILEUM Inf 3.png
-Inflamed\CD11-I-I P8 190719 10X.png
-Inflamed\CD11-I-I P8 190719 4X.png
-Inflamed\CD11-Il-I_QS_2470.png
-Inflamed\CD11-Il-I_QS_2471.png
-Inflamed\CD12-LC-I_QS_2472.png
-Inflamed\CD13-Il-I_QS_2477.png
-Inflamed\CD13-Il-I_QS_2478.png
-Inflamed\CD13-Il-I_QS_2479.png
-Inflamed\CD13-Il-I_QS_2480.png
-Inflamed\CD41-I-I P0 190830 10x.png
-Inflamed\CD41-I-I P0 190830 4x.png
-Inflamed\CD41-I-I P2 190909 10x .png
-Inflamed\CD41-I-I P2 190909 4x .png
-Inflamed\CD41-I-I p3 10x 9-19-19.png
-Inflamed\CD41-I-I p3 4x 9-19-19.png
-Inflamed\CD42-I-I P0 190905 10x .png
-Inflamed\CD42-I-I P0 190905 4x .png
-Inflamed\CD42-I-I P2 190920 10X.png
-Inflamed\CD42-I-I P2 190920 4X.png
-Inflamed\CD42-I-I P5 191002 10X.png
-Inflamed\CD42-I-I P5 191002 4X.png
-Inflamed\CD62-I-I P1 202026 10X.png
-Inflamed\CD62-I-I P1 202026 4X.png
-Inflamed\CD62-I-I P2 200304 10X.png
-Inflamed\CD62-I-I P2 200304 4X.png
-Inflamed\CD62-I-I P3 200311 10X.png
-Inflamed\CD62-I-I P3 200311 4X.png
-Inflamed\CD63-I-I P2 200313 10X.png
-Inflamed\CD63-I-I P2 200313 4X.png
-Inflamed\CD63-I-I P3 200318 10X.png
-Inflamed\CD63-I-I P3 200318 4X.png
-Inflamed\CD63-I-I P4 200325 10X.png
-Inflamed\CD63-I-I P4 200325 4X.png
-</pre>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Organizing-the-10x,-20x,-4x-and-40x-files">Organizing the 10x, 20x, 4x and 40x files<a class="anchor-link" href="#Organizing-the-10x,-20x,-4x-and-40x-files"> </a></h1>
 </div>
 </div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
 
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">shutil</span>
+<span class="kn">import</span> <span class="nn">pandas</span>
+
+<span class="n">new_dir</span> <span class="o">=</span> <span class="s1">&#39;Inflamed_10x&#39;</span>
+<span class="n">directory</span> <span class="o">=</span> <span class="s1">&#39;InflamedFinal&#39;</span>
+<span class="n">isExist</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">new_dir</span><span class="p">)</span>
+<span class="k">if</span> <span class="ow">not</span> <span class="n">isExist</span><span class="p">:</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">new_dir</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">filename</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">directory</span><span class="p">):</span>
+    <span class="n">f</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">directory</span><span class="p">,</span> <span class="n">filename</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">f</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;10X&quot;</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">continue</span>
+    <span class="n">shutil</span><span class="o">.</span><span class="n">move</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">new_dir</span><span class="p">)</span>
+            
+</pre></div>
+
+    </div>
 </div>
 </div>
 
@@ -218,26 +206,142 @@ Inflamed\CD63-I-I P4 200325 4X.png
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">shutil</span>
+<span class="kn">import</span> <span class="nn">pandas</span>
 
-
-<span class="c1"># Leaf directory </span>
-<span class="c1"># directory = &quot;test&quot;</span>
-<span class="c1"># assign directory</span>
-<span class="n">directory</span> <span class="o">=</span> <span class="s1">&#39;Inflamed&#39;</span>
-  
-<span class="c1"># Path </span>
-
-<span class="n">temp2</span> <span class="o">=</span> <span class="s2">&quot;Inflamed\CD11 IL-I-QS_2493 10x 190603.png&quot;</span>
-<span class="c1"># iterate over files in</span>
-<span class="c1"># that directory</span>
+<span class="n">new_dir</span> <span class="o">=</span> <span class="s1">&#39;Inflamed_20x&#39;</span>
+<span class="n">directory</span> <span class="o">=</span> <span class="s1">&#39;InflamedFinal&#39;</span>
+<span class="n">isExist</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">new_dir</span><span class="p">)</span>
+<span class="k">if</span> <span class="ow">not</span> <span class="n">isExist</span><span class="p">:</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">new_dir</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">filename</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">directory</span><span class="p">):</span>
     <span class="n">f</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">directory</span><span class="p">,</span> <span class="n">filename</span><span class="p">)</span>
-    <span class="c1"># checking if it is a file</span>
-  <span class="c1">#  if os.path.isfile(f):</span>
-    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">f</span><span class="p">)</span> <span class="o">==</span> <span class="mi">34</span> <span class="ow">or</span> <span class="nb">len</span><span class="p">(</span><span class="n">f</span><span class="p">)</span> <span class="o">==</span> <span class="mi">35</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
-       
+    <span class="k">if</span> <span class="n">f</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;20X&quot;</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">continue</span>
+    <span class="n">shutil</span><span class="o">.</span><span class="n">move</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">new_dir</span><span class="p">)</span>
+</pre></div>
 
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">shutil</span>
+<span class="kn">import</span> <span class="nn">pandas</span>
+
+<span class="n">new_dir</span> <span class="o">=</span> <span class="s1">&#39;Inflamed_4x&#39;</span>
+<span class="n">directory</span> <span class="o">=</span> <span class="s1">&#39;InflamedFinal&#39;</span>
+<span class="n">isExist</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">new_dir</span><span class="p">)</span>
+<span class="k">if</span> <span class="ow">not</span> <span class="n">isExist</span><span class="p">:</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">new_dir</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">filename</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">directory</span><span class="p">):</span>
+    <span class="n">f</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">directory</span><span class="p">,</span> <span class="n">filename</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">f</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;4X&quot;</span><span class="p">)</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">:</span>
+        <span class="k">continue</span>
+    <span class="n">shutil</span><span class="o">.</span><span class="n">move</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">new_dir</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">shutil</span>
+<span class="kn">import</span> <span class="nn">pandas</span>
+
+<span class="n">new_dir</span> <span class="o">=</span> <span class="s1">&#39;Inflamed_40x&#39;</span>
+<span class="n">directory</span> <span class="o">=</span> <span class="s1">&#39;InflamedFinal&#39;</span>
+<span class="n">isExist</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">new_dir</span><span class="p">)</span>
+<span class="k">if</span> <span class="ow">not</span> <span class="n">isExist</span><span class="p">:</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">new_dir</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">filename</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">directory</span><span class="p">):</span>
+    <span class="n">f</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">directory</span><span class="p">,</span> <span class="n">filename</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">f</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;40x&quot;</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">continue</span>
+    <span class="n">shutil</span><span class="o">.</span><span class="n">move</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">new_dir</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">shutil</span>
+<span class="kn">import</span> <span class="nn">pandas</span>
+<span class="kn">import</span> <span class="nn">csv</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">new_dir = &#39;Inflamed_10x&#39;</span>
+<span class="sd">directory = &#39;Cohort2_InflamedFinal&#39;</span>
+<span class="sd">isExist = os.path.exists(new_dir)</span>
+<span class="sd">if not isExist:</span>
+<span class="sd">    os.makedirs(new_dir)</span>
+<span class="sd">for filename in os.listdir(directory):</span>
+<span class="sd">    f = os.path.join(directory, filename)</span>
+<span class="sd">    if f.find(&quot;10X&quot;) &lt; 0:</span>
+<span class="sd">        continue</span>
+<span class="sd">    shutil.move(f, new_dir)</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="n">directory</span> <span class="o">=</span> <span class="s1">&#39;Cohort2_InflamedFinal&#39;</span>
+
+
+   
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;csv_data.csv&#39;</span><span class="p">,</span> <span class="n">newline</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">csvfile</span><span class="p">:</span>
+    <span class="n">csv_data</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">reader</span><span class="p">(</span><span class="n">csvfile</span><span class="p">)</span>
+    <span class="n">col_cnt</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="nb">next</span><span class="p">(</span><span class="n">csv_data</span><span class="p">))</span>
+    <span class="k">for</span> <span class="n">filename</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">directory</span><span class="p">):</span>
+        <span class="n">csvfile</span><span class="o">.</span><span class="n">seek</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+        <span class="c1"># f = os.path.join(directory, filename)</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span> <span class="o">==</span> <span class="mi">5</span><span class="p">:</span>
+            <span class="n">f</span> <span class="o">=</span> <span class="n">filename</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">1</span><span class="p">]</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span> <span class="o">==</span> <span class="mi">6</span><span class="p">:</span>
+            <span class="n">f</span> <span class="o">=</span> <span class="n">filename</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span> <span class="o">==</span> <span class="mi">7</span><span class="p">:</span>
+            <span class="n">f</span> <span class="o">=</span> <span class="n">filename</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span>
+        <span class="k">for</span> <span class="n">csv_row</span> <span class="ow">in</span> <span class="n">csv_data</span><span class="p">:</span>
+            <span class="c1">#for csv_col_idx in range(0, col_cnt):</span>
+            <span class="c1">#  print(csv_col_idx, csv_row[csv_col_idx])</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">csv_row</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">==</span> <span class="n">f</span><span class="p">):</span>
+                <span class="nb">print</span><span class="p">(</span><span class="n">csv_row</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span>
+                <span class="c1"># rename the file</span>
+                <span class="k">break</span>
+    
+      
+
+                
+                    
+            
         
 </pre></div>
 
@@ -251,86 +355,9 @@ Inflamed\CD63-I-I P4 200325 4X.png
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Inflamed\CD11-I-I P8 190719 10X.png
-Inflamed\CD11-I-I P8 190719 4X.png
-Inflamed\CD41-I-I P0 190830 10x.png
-Inflamed\CD41-I-I P0 190830 4x.png
-Inflamed\CD41-I-I P2 190909 4x .png
-Inflamed\CD41-I-I p3 4x 9-19-19.png
-Inflamed\CD42-I-I P0 190905 4x .png
-Inflamed\CD42-I-I P2 190920 10X.png
-Inflamed\CD42-I-I P2 190920 4X.png
-Inflamed\CD42-I-I P5 191002 10X.png
-Inflamed\CD42-I-I P5 191002 4X.png
-Inflamed\CD62-I-I P1 202026 10X.png
-Inflamed\CD62-I-I P1 202026 4X.png
-Inflamed\CD62-I-I P2 200304 10X.png
-Inflamed\CD62-I-I P2 200304 4X.png
-Inflamed\CD62-I-I P3 200311 10X.png
-Inflamed\CD62-I-I P3 200311 4X.png
-Inflamed\CD63-I-I P2 200313 10X.png
-Inflamed\CD63-I-I P2 200313 4X.png
-Inflamed\CD63-I-I P3 200318 10X.png
-Inflamed\CD63-I-I P3 200318 4X.png
-Inflamed\CD63-I-I P4 200325 10X.png
-Inflamed\CD63-I-I P4 200325 4X.png
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-    
-
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
-<span class="n">directory</span> <span class="o">=</span> <span class="s1">&#39;Inflamed&#39;</span>
- 
-<span class="c1"># create a folder and put the first file in it</span>
-<span class="n">temp_old</span> <span class="o">=</span> <span class="s2">&quot;Inflamed\CD11 IL-I-QS_2493 10x 190603.png&quot;</span>
-<span class="k">for</span> <span class="n">filename</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">directory</span><span class="p">):</span>
-    <span class="n">f</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">directory</span><span class="p">,</span> <span class="n">filename</span><span class="p">)</span>
-    <span class="c1"># checking if it is a file</span>
-    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">f</span><span class="p">)</span> <span class="o">==</span> <span class="mi">34</span> <span class="ow">or</span> <span class="nb">len</span><span class="p">(</span><span class="n">f</span><span class="p">)</span> <span class="o">==</span> <span class="mi">35</span><span class="p">:</span>
-            <span class="n">temp</span> <span class="o">=</span> <span class="n">f</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">27</span><span class="p">]</span>
-            <span class="k">if</span> <span class="p">(</span><span class="n">temp</span> <span class="o">==</span> <span class="n">temp_old</span><span class="p">):</span>
-                <span class="nb">print</span><span class="p">(</span><span class="n">temp</span><span class="p">)</span>
-                <span class="n">temp_old</span> <span class="o">=</span> <span class="n">temp</span>
-                <span class="c1"># add temp to the same folder as temp_old folder. ask how to do this</span>
-            <span class="k">else</span><span class="p">:</span>
-                <span class="n">temp_old</span> <span class="o">=</span> <span class="n">temp</span>
-                <span class="c1"># add temp to a new folder. ask how to do this</span>
-            
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Inflamed\CD11-I-I P8 190719
-Inflamed\CD41-I-I P0 190830
-Inflamed\CD42-I-I P2 190920
-Inflamed\CD42-I-I P5 191002
-Inflamed\CD62-I-I P1 202026
-Inflamed\CD62-I-I P2 200304
-Inflamed\CD62-I-I P3 200311
-Inflamed\CD63-I-I P2 200313
-Inflamed\CD63-I-I P3 200318
-Inflamed\CD63-I-I P4 200325
+<pre>1
+13
+2
 </pre>
 </div>
 </div>
