@@ -42,7 +42,32 @@ title: JavaScript Exit Ticket Part 1; Tic Tac Toe
             width: 50%;
             font-family: 'Times New Roman';
         }
-    </style>
+    </style><style>
+    body {
+      /* display: flex; */
+      /* display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      margin: 0; */
+      background-color: #01060d;
+    }
+    .button {
+      font-size: 18px;
+      padding: 10px 20px;
+      background-color: #161666;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      margin: 0 10px;
+    }
+    .timer {
+      font-size: 24px;
+      margin-bottom: 10px;
+      color: white;
+    }
+  </style>
     <script>
         //The list board is created
         const board = [
@@ -189,11 +214,64 @@ title: JavaScript Exit Ticket Part 1; Tic Tac Toe
                     return false
                 }
             </script>
+  
+  <script>
+var timerInterval;
+var startTime;
+var elapsedTime = 0;
+var isRunning = false;
+function startTimer() {
+  if (!isRunning) {
+    startTime = Date.now() - elapsedTime;
+    timerInterval = setInterval(updateTimer, 10);
+    isRunning = true;
+  }
+}
+function stopTimer() {
+  clearInterval(timerInterval);
+  isRunning = false;
+}
+function resetTimer() {
+  clearInterval(timerInterval);
+  elapsedTime = 0;
+  startTime = Date.now(); 
+  isRunning = false;
+  updateTimer();
+}
+function updateTimer() {
+  var currentTime = Date.now();
+  elapsedTime = currentTime - startTime;
+  var formattedTime = formatTime(elapsedTime);
+  document.querySelector('.timer').textContent = formattedTime;
+}
+function formatTime(milliseconds) {
+  var hours = Math.floor(milliseconds / (1000 * 60 * 60));
+  var minutes = Math.floor((milliseconds % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((milliseconds % (1000 * 60)) / 1000);
+  var formattedHours = hours.toString().padStart(2, '0');
+  var formattedMinutes = minutes.toString().padStart(2, '0');
+  var formattedSeconds = seconds.toString().padStart(2, '0');
+  return formattedHours + ':' + formattedMinutes + ':' + formattedSeconds;
+}
+  </script>
 </head>
 <body style="background-color:#FAF9F6 ;">
 <br>
 <br>
+
 <center><h1>Tic Tac Toe</h1></center>
+  <h1 class="text-center m-5">Hours</h1>
+  <div class="text-center m-5 timer">00:00:00</div>
+  <div class="button-container">
+    <center> <button class="button" onclick="startTimer()">Start</button></center>
+    <br>
+    <center><button class="button" onclick="stopTimer()">Stop</button></center>
+    <br>
+    <center><button class="button" onclick="resetTimer()">Reset</button></center>
+  </div>
+
+
+
 <br>
 <table>
     <tr>
