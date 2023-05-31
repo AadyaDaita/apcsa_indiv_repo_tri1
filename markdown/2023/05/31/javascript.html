@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Tic Tac Toe | Aadya’s CSA Fastpage</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Tic Tac Toe" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="&lt;!DOCTYPE html&gt;" />
+<meta property="og:description" content="&lt;!DOCTYPE html&gt;" />
+<link rel="canonical" href="https://aadyadaita.github.io/apcsa_indiv_repo_tri1/markdown/2023/05/31/javascript.html" />
+<meta property="og:url" content="https://aadyadaita.github.io/apcsa_indiv_repo_tri1/markdown/2023/05/31/javascript.html" />
+<meta property="og:site_name" content="Aadya’s CSA Fastpage" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-05-31T00:00:00-05:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Tic Tac Toe" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-05-31T00:00:00-05:00","datePublished":"2023-05-31T00:00:00-05:00","description":"&lt;!DOCTYPE html&gt;","headline":"Tic Tac Toe","mainEntityOfPage":{"@type":"WebPage","@id":"https://aadyadaita.github.io/apcsa_indiv_repo_tri1/markdown/2023/05/31/javascript.html"},"url":"https://aadyadaita.github.io/apcsa_indiv_repo_tri1/markdown/2023/05/31/javascript.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/apcsa_indiv_repo_tri1/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://aadyadaita.github.io/apcsa_indiv_repo_tri1/feed.xml" title="Aadya's CSA Fastpage" /><link rel="shortcut icon" type="image/x-icon" href="/apcsa_indiv_repo_tri1/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/apcsa_indiv_repo_tri1/">Aadya&#39;s CSA Fastpage</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/apcsa_indiv_repo_tri1/notes/">Notes</a><a class="page-link" href="/apcsa_indiv_repo_tri1/random/">Random stuff I can write about</a><a class="page-link" href="/apcsa_indiv_repo_tri1/search/">Search</a><a class="page-link" href="/apcsa_indiv_repo_tri1/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Tic Tac Toe</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2023-05-31T00:00:00-05:00" itemprop="datePublished">
+        2023-05-31 00:00:00 -0500
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      1 min read
+    
+</span></p>
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i>
+      
+        <a class="category-tags-link" href="/apcsa_indiv_repo_tri1/categories/#markdown">markdown</a>
+        
+      
+      </p>
+    
+    </header>
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h1"><a href="#tic-tac-toe">Tic Tac Toe</a></li>
+<li class="toc-entry toc-h1"><a href="#------------">
+        
+    </a></li>
+</ul><body>
+<p>&lt;!DOCTYPE html&gt;</p>
+
+
+
+    <meta charset="UTF-8">
+    <title>Tic Tac Toe</title>
+    <style>
+        td {
+            width: 100px;
+            height: 100px;
+        }
+        table {
+            margin: 18px auto;
+        }
+        .column {
+            border-left: 2.5px solid #000000;
+            border-right: 2.5px solid #000000;
+        }
+        .row {
+            border-top: 2.5px solid #000000;
+            border-bottom: 2.5px solid #000000;
+        }
+        .text {
+            text-align: center;
+            font-size: 75px;
+            font-family: sans-serif;
+            color: #C6AEB8;
+        }
+        .again {
+            background: #F5CDDE;
+            padding: 15px 100px;
+            text-align: center;
+            font-size: 20px;
+            margin: 4px 2px;
+            cursor: pointer;
+            width: 50%;
+            font-family: 'Times New Roman';
+        }
+    </style>
+    <script>
+        //The list board is created
+        const board = [
+            ["", "", ""],
+            ["", "", ""],
+            ["", "", ""]
+        ]
+        // each element is assigned an html ID. so, when the list is updated, the html will print the value in the list.
+            window.onload = function () {
+                document.getElementById('box00').innerHTML = board[0][0];
+                document.getElementById('box01').innerHTML = board[0][1];
+                document.getElementById('box02').innerHTML = board[0][2];
+                document.getElementById('box10').innerHTML = board[1][0];
+                document.getElementById('box11').innerHTML = board[1][1];
+                document.getElementById('box12').innerHTML = board[1][2];
+                document.getElementById('box20').innerHTML = board[2][0];
+                document.getElementById('box21').innerHTML = board[2][1];
+                document.getElementById('box22').innerHTML = board[2][2];
+            };
+        //main procedure that is used in 3C. It is called user_clicked.
+        //The user clicking on a location on the game grid invokes the procedure.
+        var is_user_turn = true;
+        function user_clicked(row, column) {
+            if (is_user_turn) {
+                if (is_empty(row, column)) {
+                    //checking is the list element is empty
+                    board[row][column] = "O"
+                    document.getElementById('box' + row + column).innerHTML = board[row][column];
+    /* In my game_done function, if rnd is equal to 0, then game_done checks
+        whether
+        there are any matches row-wise. If rnd is equal to 1, then game_done checks if
+        there are any matches column wise. Lastly, if rnd is 3 and 4, game_done checks
+        for matches left and right diagonally, respectively. So, in the user_clicked
+        function,
+        it initialized rnd to 0, and then iterates until 4, checking whether or not the
+        game is done. */
+        let rnd = 0;
+                        while (rnd < 4) {
+                            if (game_done(rnd++)) {
+                                //console.log("you won")
+                                document.getElementById('status').innerHTML = "YOU WON!!!";
+                                return
+                            }
+                        }
+                        is_user_turn = false
+                        delay(100).then(() => computer_play())
+                    }
+                    else {
+                        document.getElementById('status').innerHTML = "Error: please click on an empty space"
+                        delay(3000).then(() => location.reload())
+                    }
+                }
+            }
+            // is a particular space empty?
+            function is_empty(row1, column1) {
+                if (board[row1][column1] === "") {
+                    return true
+                }
+                return false
+            }
+            function computer_play() {
+                if (!is_user_turn && !board_full()) {
+                    let row_rand = Math.floor(Math.random() * 3);
+                    let column_rand = Math.floor(Math.random() * 3);
+                    // randomizing where the computer will place an "X".
+                    while (!is_empty(row_rand, column_rand)) {
+                        row_rand = Math.floor(Math.random() * 3);
+                        column_rand = Math.floor(Math.random() * 3);
+                    }
+                    board[row_rand][column_rand] = "X"
+                    document.getElementById('box' + row_rand + column_rand).innerHTML =
+                        board[row_rand][column_rand];
+                    let rnd = 0;
+                    // checking if the game is done (look at comment above for gam_done explanation)
+                    while (rnd < 4) {
+                        if (game_done(rnd++)) {
+//console.log("computer won")
+                    document.getElementById('status').innerHTML = "YOU LOST";
+                    return
+                }
+            }
+        }
+        // what do to for a tie
+        if (board_full()) {
+            document.getElementById('status').innerHTML = "TIE";
+        }
+        is_user_turn = true
+    }
+    // are all the list elements of bord full?
+    function board_full() {
+        for (let row = 0; row < 3; row++) {
+            for (let column = 0; column < 3; column++) {
+                if (board[row][column] === "") {
+                    return false
+                }
+            }
+        }
+        return true
+    }
+    function delay(time) {
+        return new Promise(resolve => setTimeout(resolve, time));
+    }
+    function game_done(rnd) {
+        //for sideways checking
+        if (rnd == 0) {
+            for (column = 0; column < 3; column++) {
+                if (board[0][column] == "O" && board[1][column] == "O" && board[2][column] == "O") {
+                    return true
+                }
+                if (board[0][column] == "X" && board[1][column] == "X" && board[2][column] == "X") {
+                    return true
+                }
+            }
+            }
+                    else if (rnd == 1) {
+                        // for downward checking
+                        for (row = 0; row < 3; row++) {
+                            if (board[row][0] == "O" && board[row][1] == "O" && board[row][2] == "O") {
+                                return true
+                            }
+                            if (board[row][0] == "X" && board[row][1] == "X" & board[row][2] == "X") {
+                                return true
+                            }
+                        }
+                    }
+                    else if (rnd == 2) {
+                        //checking left diagonally
+                        if (board[0][0] == "O" && board[1][1] == "O" && board[2][2] == "O") {
+                            return true
+                        }
+                        if (board[0][0] == "X" && board[1][1] == "X" && board[2][2] == "X") {
+                            return true
+                        }
+                    }
+                    else if (rnd == 3) {
+                        // checking right diagonally
+                        if (board[0][2] == "O" && board[1][1] == "O" && board[2][0] == "O") {
+                            return true
+                        }
+                        if (board[0][2] == "X" && board[1][1] == "X" && board[2][0] == "X") {
+                            return true
+                        }
+                    }
+                    return false
+                }
+            </script>
+
+
+<br>
+<br>
+<center><h1>
+<a class="anchor" href="#tic-tac-toe" aria-hidden="true"><span class="octicon octicon-link"></span></a>Tic Tac Toe</h1></center>
+<br>
+<table>
+    <tr>
+        <td class="text" id="box00" onclick="user_clicked(0,0)"></td>
+        <td class="column text" id="box01" onclick="user_clicked(0,1)"></td>
+        <td class="text" id="box02" onclick="user_clicked(0,2)"></td>
+    </tr>
+    <tr>
+        <td id="box10" class="row text" onclick="user_clicked(1,0)"></td>
+        <td id="box11" class="column row text" onclick="user_clicked(1,1)"></td>
+        <td id="box12" class="row text" onclick="user_clicked(1,2)"></td>
+    </tr>
+    <tr>
+        <td id="box20" class="text" onclick="user_clicked(2,0)"></td>
+        <td id="box21" class="column text" onclick="user_clicked(2,1)"></td>
+        <td id="box22" class="text" onclick="user_clicked(2,2)"></td>
+    </tr>
+</table>
+<br>
+<br>
+<center>
+    <h1>
+<a class="anchor" href="#------------" aria-hidden="true"><span class="octicon octicon-link"></span></a>
+        <div id="status"></div>
+    </h1>
+</center>
+<br>
+<center><button class="again" onclick="location.reload()">Play Again!</button></center>
+
+
+
+</body>
+  </div><a class="u-url" href="/apcsa_indiv_repo_tri1/markdown/2023/05/31/javascript.html" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/apcsa_indiv_repo_tri1/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="https://aadyadaita.github.io/apcsa_indiv_repo_tri1/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/apcsa_indiv_repo_tri1/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>Hey this is Aadya&#39;s fastpage</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
