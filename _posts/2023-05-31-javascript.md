@@ -42,7 +42,22 @@ title: JavaScript Exit Ticket Part 1; Tic Tac Toe
             width: 50%;
             font-family: 'Times New Roman';
         }
-    </style>
+    </style><style>
+    .button {
+      font-size: 18px;
+      padding: 10px 20px;
+      background-color: #161666;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      margin: 0 10px;
+    }
+    .timer {
+      font-size: 24px;
+      margin-bottom: 10px;
+      color: white;
+    }
+  </style>
     <script>
         //TIC TAC TOE BOARD CREATED
         //The list board is created
@@ -246,6 +261,8 @@ function formatTime(milliseconds) {
     <br>
     <center><button class="button" onclick="resetTimer()">Reset</button></center>
   </div>
+
+
 
 <br>
 <table>
