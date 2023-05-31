@@ -2,10 +2,9 @@
 toc: true
 layout: post
 categories: [markdown]
-title: Tic Tac Toe
+title: JavaScript Exit Ticket Part 1; Tic Tac Toe
 ---
 
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
