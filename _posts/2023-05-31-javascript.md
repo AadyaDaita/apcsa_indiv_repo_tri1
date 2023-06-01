@@ -253,7 +253,7 @@ function formatTime(milliseconds) {
 
 <center><h1>Tic Tac Toe</h1></center>
   <h1 class="text-center m-5">Hours</h1>
-  <div class="text-center m-5 timer">00:00:00</div>
+  <div style="color:red;" class="text-center m-5 timer">00:00:00</div>
   <div class="button-container">
     <center> <button class="button" onclick="startTimer()">Start</button></center>
     <br>
