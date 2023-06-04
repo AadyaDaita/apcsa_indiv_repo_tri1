@@ -2,7 +2,7 @@
 toc: true
 layout: post
 categories: [markdown]
-title: JavaScript Exit Ticket Part 1; Tic Tac Toe
+title: JavaScript Exit Ticket Tic Tac Toe
 ---
 
 <html lang="en">
@@ -42,22 +42,7 @@ title: JavaScript Exit Ticket Part 1; Tic Tac Toe
             width: 50%;
             font-family: 'Times New Roman';
         }
-    </style><style>
-    .button {
-      font-size: 18px;
-      padding: 10px 20px;
-      background-color: #161666;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      margin: 0 10px;
-    }
-    .timer {
-      font-size: 24px;
-      margin-bottom: 10px;
-      color: white;
-    }
-  </style>
+    </style>
     <script>
         //TIC TAC TOE BOARD CREATED
         //The list board is created
@@ -206,46 +191,6 @@ title: JavaScript Exit Ticket Part 1; Tic Tac Toe
                 }
             </script>
   
-  <script>
-    //TIMER CODE START
-var timerInterval;
-var startTime;
-var elapsedTime = 0;
-var isRunning = false;
-function startTimer() {
-  if (!isRunning) {
-    startTime = Date.now() - elapsedTime;
-    timerInterval = setInterval(updateTimer, 10);
-    isRunning = true;
-  }
-}
-function stopTimer() {
-  clearInterval(timerInterval);
-  isRunning = false;
-}
-function resetTimer() {
-  clearInterval(timerInterval);
-  elapsedTime = 0;
-  startTime = Date.now(); 
-  isRunning = false;
-  updateTimer();
-}
-function updateTimer() {
-  var currentTime = Date.now();
-  elapsedTime = currentTime - startTime;
-  var formattedTime = formatTime(elapsedTime);
-  document.querySelector('.timer').textContent = formattedTime;
-}
-function formatTime(milliseconds) {
-  var hours = Math.floor(milliseconds / (1000 * 60 * 60));
-  var minutes = Math.floor((milliseconds % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((milliseconds % (1000 * 60)) / 1000);
-  var formattedHours = hours.toString().padStart(2, '0');
-  var formattedMinutes = minutes.toString().padStart(2, '0');
-  var formattedSeconds = seconds.toString().padStart(2, '0');
-  return formattedHours + ':' + formattedMinutes + ':' + formattedSeconds;
-}
-  </script>
 </head>
 <body style="background-color:#FAF9F6 ;">
 <br>
