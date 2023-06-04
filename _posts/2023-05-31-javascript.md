@@ -194,22 +194,6 @@ title: JavaScript Exit Ticket Tic Tac Toe
 </head>
 <body style="background-color:#FAF9F6 ;">
 <br>
-<br>
-
-<center><h1>Tic Tac Toe</h1></center>
-  <h1 class="text-center m-5">Hours</h1>
-  <div style="color:red;" class="text-center m-5 timer">00:00:00</div>
-  <div class="button-container">
-    <center> <button class="button" onclick="startTimer()">Start</button></center>
-    <br>
-    <center><button class="button" onclick="stopTimer()">Stop</button></center>
-    <br>
-    <center><button class="button" onclick="resetTimer()">Reset</button></center>
-  </div>
-
-
-
-<br>
 <table>
     <tr>
         <td class="text" id="box00" onclick="user_clicked(0,0)"></td>
